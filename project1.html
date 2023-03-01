@@ -30,19 +30,19 @@
         </p>
         <h5>Initial Sketch</h5>
         <p>When I was first looked at this assignment, I thought "wow, there will be a lot of charts I have to put on one page." However, in this sketch, it looked like everything would fit, and even have left over space! Sad to say, that did not happen. However, I referred to this as I started positioning my charts as I build them. </p>
-        <img src="images/CS5125Proj1/Sketching1.png" class="proj1 media-img img-fluid">
-        <img src="images/cs5125proj1/Sketching2.png" class="proj1 media-img img-fluid">
-        <img src="images/cs5125proj1/Sketching3.png" class="proj1 media-img img-fluid">
-        <img src="images/cs5125proj1/Sketching4.png" class="proj1 media-img img-fluid">
-        <img src="images/cs5125proj1/Sketching5.png" class="proj1 media-img img-fluid">
-        <img src="images/cs5125proj1/Sketching6.png" class="proj1 media-img img-fluid">
+        <img src="images/Sketching1.png" class="proj1 media-img img-fluid">
+        <img src="images/Sketching2.png" class="proj1 media-img img-fluid">
+        <img src="images/Sketching3.png" class="proj1 media-img img-fluid">
+        <img src="images/Sketching4.png" class="proj1 media-img img-fluid">
+        <img src="images/Sketching5.png" class="proj1 media-img img-fluid">
+        <img src="images/Sketching6.png" class="proj1 media-img img-fluid">
         <h5>Second iteration of sketches</h5>
         <p>After creating all my bar charts and simpler charts, I realized that especially for my line chart, scatterplot, and discovery methods barchart, it made more sense to spread out the data. These charts had longer x-axes so that the data wouldn't be so scrunched up, which also makes it easier for the user to read. </p>
-        <img src="images/cs5125proj1/Sketching7.png" class="proj1 media-img img-fluid">
-        <img src="images/cs5125proj1/Sketching8.png" class="proj1 media-img img-fluid">
+        <img src="images/Sketching7.png" class="proj1 media-img img-fluid">
+        <img src="images/Sketching8.png" class="proj1 media-img img-fluid">
         <h5>Sketch of System Browser</h5>
         <p>While I did not get around to completing the Exoplanet System Browser the way I wanted, I had thought about what the layout should look like.</p>
-        <img src="images/cs5125proj1/Sketching9.png" class="proj1 media-img img-fluid">
+        <img src="images/Sketching9.png" class="proj1 media-img img-fluid">
 
 
 
@@ -50,41 +50,46 @@
         <h2><br/>Visualization Components</h2>
 
         <h5>Full Dahsboard View</h5>
-        <img src="images/cs5125proj1/FullDashboard.png" class="proj1 media-img img-fluid">
+        <img src="images/FullDashboard.png" class="proj1 media-img img-fluid">
         <h5>Barcharts</h5>
         <p>The visualizations below all use the barchart.js class. Each barchart is capable of being clicked on in order to filter data and update with the same data on the rest of the bar charts. Hovering on the bars displays the data of how many exoplanets belong to that category. Although it may have been a better idea to add a y-axis label, I thought it would look to clunky - and would not have meant much since all of my barcharts had the same y-axis units. Instead, I opted to make my chart titles very specific and framed as a question, so that the user could more easily understand what I am trying to show here.</p>
         <p>Another design decision I made was to filter out all rows that had missing values for certain fields. Since all of my visualizations are connected, I thought it could be misleading to the user if, for instance, there are only 1000 total exoplanets with valid star types, while there are 3000 total exoplanets with habitable/inhabiltable data. The user may be confused why there are different counts of exoplanets. To give my users the options of seeing all exoplanets, with the knowledge that there could be missing data, I added a checkbox to the top of my page where users can toggle whether to use all data or not.</p>
         <div class="d-flex flex-row">
-          <div class="p-1"><img src="images/cs5125proj1/Viz1.png" class="proj1flex media-img img-fluid"></div>
-          <div class="p-1"><img src="images/cs5125proj1/Viz2.png" class="proj1flex media-img img-fluid"></div>
-          <div class="p-1"><img src="images/cs5125proj1/Viz3.png" class="proj1flex media-img img-fluid"></div>
+          <div class="p-1"><img src="images/Viz1.png" class="proj1flex media-img img-fluid"></div>
+          <div class="p-1"><img src="images/Viz2.png" class="proj1flex media-img img-fluid"></div>
+          <div class="p-1"><img src="images/Viz3.png" class="proj1flex media-img img-fluid"></div>
         </div>
         <div class="d-flex flex-row pb-5">
-          <div class="p-1"><img src="images/cs5125proj1/Viz4.png" class="proj1flex media-img img-fluid"></div>
-          <div class="p-1"><img src="images/cs5125proj1/Viz5.png" class="proj1flex media-img img-fluid"></div>
+          <div class="p-1"><img src="images/Viz4.png" class="proj1flex media-img img-fluid"></div>
+          <div class="p-1"><img src="images/Viz5.png" class="proj1flex media-img img-fluid"></div>
         </div>
 
 
         <h5>Histogram</h5>
         <p>The visualization below uses the histogram.js class. To create cohesion across my visualizations, I made this histogram the same color as my barcharts. Similar to the barchart, hovering over the bar shows a description of the data and the count of planets. The histogram is also hooked up to the user's click filtering and my custom mising data filter. I decided to create a histogram with 20 bins, unlike the default 70, since having that many bars is not readable to the user.</p>
-        <img src="images/cs5125proj1/Viz6.png" class="pb-5 proj1 media-img img-fluid">
+        <img src="images/Viz6.png" class="pb-5 proj1 media-img img-fluid">
 
 
         <h5>Linechart</h5>
         <p>The visualization below uses the linechart.js class. This was modified from the example provided by the instructor. Similarly with the barchart and histograms, I did not clutter my chart with axis titles, since reading the title will quickly inform the user as to what the linechart means. When a user hovers over the chart, the year and number of exoplanets can be viewed. The filters also apply to the linechart.</p>
-        <img src="images/cs5125proj1/Viz7.png" class="pb-5 proj1 media-img img-fluid">
+        <img src="images/Viz7.png" class="pb-5 proj1 media-img img-fluid">
 
         <h5>Scatterplot</h5>
         <p>The visualization below uses the scatterplot.js class. Each exoplanet is plotted by the log of its radius and the log of its mass. Additionally, I sourced info for the planets in our solar system and added that to my scatterplot, shown in orange. When a user hovers over a circle, the circle darkens and the tooltip shows up, showing the user data on the exoplanet they selected. Clicking on the data point will open up the Exoplanet System Browser, which will be discussed further in a later section.</p>
-        <img src="images/cs5125proj1/Viz8.png" class="pb-5 proj1 media-img img-fluid">
+        <img src="images/Viz8.png" class="pb-5 proj1 media-img img-fluid">
 
         <h5>Table</h5>
         <p>The visualization below uses the table.js class. This is a class I created to handle using the Tabulator library, for both loading the data in and creating the table. Although another option was to create an html table from scratch, using a library makes it easier to deal with the formatting - and not have to "reinvent the wheel". The arrows allow the user to sort the data from descending or ascending. Each row contains information for each unique exoplanet. When I was considering what data to show here, I decided to focus on the qualitative variables of the data - especially since plenty of quantitative data is being communicated through the other visualizations.</p>
-        <img src="images/cs5125proj1/Viz9.png" class="pb-5 proj1 media-img img-fluid">
+        <img src="images/Viz9.png" class="pb-5 proj1 media-img img-fluid">
 
-        <!-- TODO -->
-        <p>1 section on the visualization components: Explain each view of the data, the GUI, etc.  Explain how you can interact with your application, and how the views update in response to these interactions. 
-        </p>
+        <h5>Exoplanet System Browser</h5>
+        <p>The visualization below shows data for an individual exoplanet, if a table row or scatterplot data point is clicked. THe popup is made of a modal that has multiple svg elements inside it to display the data. The top left features the exoplanet name large and in bold, to make it easier for the user to quickly see what data they are viewing currently. The top left corner also shows other data about the system, stars, and planets.</p>
+        <p>Next is the main visualization of the planet and its sun. The sun is colored according to the star type, as certain spectral types are associated with different colors, <a href="http://hyperphysics.phy-astr.gsu.edu/hbase/Starlog/staspe.html" target="_blank">as can be seen from this source.</a> A legend is in the section below to help the user identify the spectral type. Similarly, the exoplanet is colored - however, this time, because there is no associated color with these planets, I used a categorical color theme, <a href="https://github.com/d3/d3-scale-chromatic" target="_blank">using this library.</a></p>
+        <img src="images/Viz10.png" class="pb-5 proj1 media-img img-fluid">
+
+
+
+
         <h2><br/>Discoveries</h2>
         <p>1 section on what your application enables you to discover: Present some findings you arrive at with your application. 
         </p>
