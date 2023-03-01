@@ -35,6 +35,27 @@ navbar-brand{
     justify-content: center;
 }
 
+.proj1{
+    max-width: 80% !important;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.proj1flex{
+    width: 100% !important;
+    display: block;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    max-height: 312px;
+}
+
+ul{
+    margin-inline-start: 2em; 
+}
+
 
 /*
 colors: #b57edc
@@ -44,3 +65,4 @@ colors: #b57edc
 #ffecff
 #ffffff
 */
+
