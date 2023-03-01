@@ -19,9 +19,9 @@
         </p>
 
         <h2><br/>The Data</h2>
-        <p>The data was sourced from a public data repository on exoplanets. However, at first glance, it was hard to understand what the column names were supposed to be (ex: sy_snum, pl_rade). I relied on the documentation page to understand what each column was supposed to represent and the units associated with the data.
+        <p>The data was sourced from a <a href="https://exoplanetarchive.ipac.caltech.edu/cgi-bin/TblView/nph-tblView?app=ExoTbls&config=PS" target="_blank">public data repository on exoplanets</a>. However, at first glance, it was hard to understand what the column names were supposed to be (ex: sy_snum, pl_rade). I relied on the documentation page to understand what each column was supposed to represent and the units associated with the data.
         </p>
-        <p>I also referenced this page to find the radius and mass of the planets within our system. It was confusing at first, since I wasn't sure what an Earth radius was. I learned a lot about the ways of describing planets through my research. 
+        <p>I also referenced <a href="https://nssdc.gsfc.nasa.gov/planetary/factsheet/planet_table_ratio.html" target="_blank">this page to find the radius and mass of the planets within our system</a>. It was confusing at first, since I wasn't sure what an Earth radius was. I learned a lot about the ways of describing planets through my research. 
         </p>
 
         
@@ -84,48 +84,69 @@
 
         <h5>Exoplanet System Browser</h5>
         <p>The visualization below shows data for an individual exoplanet, if a table row or scatterplot data point is clicked. THe popup is made of a modal that has multiple svg elements inside it to display the data. The top left features the exoplanet name large and in bold, to make it easier for the user to quickly see what data they are viewing currently. The top left corner also shows other data about the system, stars, and planets.</p>
-        <p>Next is the main visualization of the planet and its sun. The sun is colored according to the star type, as certain spectral types are associated with different colors, <a href="http://hyperphysics.phy-astr.gsu.edu/hbase/Starlog/staspe.html" target="_blank">as can be seen from this source.</a> A legend is in the section below to help the user identify the spectral type. Similarly, the exoplanet is colored - however, this time, because there is no associated color with these planets, I used a categorical color theme, <a href="https://github.com/d3/d3-scale-chromatic" target="_blank">using this library.</a></p>
+        <p>Next is the main visualization of the planet and its sun. The sun is colored according to the star type, as certain spectral types are associated with different colors, <a href="http://hyperphysics.phy-astr.gsu.edu/hbase/Starlog/staspe.html" target="_blank">as can be seen from this source.</a> A legend is in the section below to help the user identify the spectral type. Similarly, the exoplanet is colored - however, this time, because there is no associated color with these planets, I used a categorical color theme, <a href="https://github.com/d3/d3-scale-chromatic" target="_blank">using this library. The orbit can be seen visually around the sun, with the planet along the orbit. I added labels so that the user can discern which is which.</a></p>
+        <p>In the bottom left corner, I added disclaimers for the user to read so that they don't assume certain things about my visualization. For example, the sun and planet are not scaled to each other. While that was one of the A goals, I did not have time to get to it, but thought it would be best for the user to understand that instead of being misled.</p>
+        <p>At the very bottom is my data section. This includes the two legends I previously mentioned, and other information about the system, star, and exoplanet that I thought would be useful to the user.</p>
         <img src="images/Viz10.png" class="pb-5 proj1 media-img img-fluid">
 
 
 
-
         <h2><br/>Discoveries</h2>
-        <p>1 section on what your application enables you to discover: Present some findings you arrive at with your application. 
-        </p>
+        <p>At first glance, there is a lot of data for a user to take in. Below are some of the discoveries you can make by just viewing the charts as they are.</p>
+        <ul>
+          <li>Most exoplanets only have 1 star, but some have 2! This is different from Earth's system</li>
+          <li>Most exoplanets orbit around a G type star - if the user clicks on the tick title, they would be able to find out that the G star is also known as a yellow supergiant, which includes our sun!</li>
+          <li>There was a big jump in the discovery of exoplanets in 2014. A quick Google search reveals that <a href="https://www.nature.com/articles/nature.2014.14779" target="_blank">astronmers approved the addition of 750 exoplanets to the database that year.</a></li>
+        </ul>
+
+        <p>Other discoveries that can be made with the interactions are...</p>
+        <ul>
+          <li>Once a user filters the data by habitable exoplanets, it can be seen in the chart next to it that most of these habitable planets orbit an M type star.</li>
+          <li>Once the user clicks on "Click to include data with missing fields", the linechart shows that the year with the most discoveries was actually 2016 - and that we haven't collected all the data we need to collect on these exoplanets found in that year.</li>
+        </ul>
+
+
         <h2><br/>Process</h2>
         <h5>Libraries used</h5>
         <ul>
           <li><a href="https://d3js.org" target="_blank">D3.js</a> - JavaScript library for manipulating documents based on data</li>
+          <li><a href="https://nodejs.org/en/" target="_blank">Node.js</a></li>
           <li><a href="https://tabulator.info/" target="_blank">Tabulator</a></li>
-          <li>d3-scale-chromatic</li>
+          <li><a href="https://www.npmjs.com/package/d3-scale-chromatic">d3-scale-chromatic</a></li>
         </ul>
-        <p>1 section on your process- what libraries did you use?  How did you structure your code?  How can you access it and run it?  Link to your code (and the live application, if it is deployed online).
+        <h5>Other resources</h5>
+        <ul>
+          <li><a href="http://hyperphysics.phy-astr.gsu.edu/hbase/Starlog/staspe.html" target="_blank">Star Spectral Types and their colors</a></li>
+          <li><a href="https://d3-graph-gallery.com/graph/custom_legend.html" target="_blank">Custom d3 legend demo + example</a></li>
+        </ul>
 
-        </p>
-        <h2><br/>Challenges</h2>
-        <p>UPDATE: optional- perhaps you struggled with the project and learned a lot, but maybe there wasn't quite time to create the project you hoped to have.  It may feel like you don't have as much to write in your documentation, so you can include
-          'challenges' section, where you describe what technical difficulties you encountered while doing this project, and reflect on how you might approach future projects.
-        </p>
-        <h2><br/>Future Works</h2>
-        <p>'future works' section where you describe what you wanted to do
-        </p>
+        <p>For the structure of my code, I tried to modularize as much as I could. If I saw somewhere where I was writing the same code over and over, I created a function or class to handle it. I also followed the same general initVis(), updateVis(), renderVis() structure to all my visualization classes to make my structure consistent.</p>
+
+        <p>To run my code, one simply has to run the python3 -m http.server 8000. This requires the http.server libary. My program may also require that the aformentioned libraries be npm installed to the project locally. To npm install locally, simply navigate in the terminal to the main project folder and run "npm install ____" (library name, shows in the links above).</p>
+
+        <p>My code can be <a href="https://github.com/linakaval/cs5124-visual-data" target="_blank">viewed on my Github.</a></p>
+
+
+        <h2><br/>Challenges + Future Works</h2>
+        <p>My goal is always to complete my work. Unfortunately that was not possible with this project. I am proud of the progress I made but I do wish to have completed the A-goals. Next time, I know that I should start much earlier.</p>
+
+        <h5>Future Works</h5>
+        <ul>
+          <li>Suppressing errors when the missing fields checkmark is checked and the scatterplot datapoints that are missing a radius and/or mass are attempted to be plotted.</li>
+          <li>Verifying that the orbital ellipse showed in the system browser is accurate</li>
+          <li>Determining the best planet to star ratio. Do I standardize the planet sizes to each other? Or make sure that my planet and star are proportional in size?</li>
+          <li>Adding animations to the planet and orbital</li>
+          <li>Adding zoom features to various charts</li>
+          <li>Completing the deliverable of the brushing and linking</li>
+        </ul>
+
+
         <h2><br/>Demo video</h2>
         <p>Include a 2-3 minute demo video, showing your application in action.  The easiest way to record this is with a screen capture tool, which also captures audio- such as Quicktime.  Use a voiceover or video captions to explain your application.  Demo videos should be sufficient on their own, but can reference your documentation.  Include the name of the project, your name, the project components, and how your application works.  You can present it on your webpage or on youtube, but linked on your webpage. 
         </p>
 
-
-
-
-      
-
-
       </div>
     </div>
-
-
-
-
 
 
     <script>
