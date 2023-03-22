@@ -19,31 +19,84 @@
         
         <div class="row p-5 mb-2 bg-light rounded-3">
           <h2>Introduction</h2>
-          <p>Ancestry Trees is a service that allows users to create family trees manually (or imported through hints from data that Ancestry collects from birth/death databases). Users are able to add family members to their tree, along with certain facts about the person, including name, birthday, death date, fun facts, pictures, etc. Previously, users would also just handwrite family trees - this could easily be destroyed in a house fire. Being able to upload pictures also means that old photos can be backed up in the family tree itself.</p>
+          <p>Ancestry Trees is a service that allows users to create family trees manually (or imported through hints from data that Ancestry collects from birth/death databases). Users are able to add family members to their tree, along with certain facts about the person, including name, birthday, death date, fun facts, pictures, etc. Before online family tree services existed, most people would handwrite their family trees - this could easily be destroyed in a house fire. Being able to upload pictures also means that old photos can be backed up in the family tree itself.</p>
           <p>One of the main reasons I wanted to map out my family tree is because only my immediate family lives in the US - as my grandparents and parents die, I did not want to lose the connections to my family in Japan and Turkey. Therefore, before everyone passes away, I wanted to track as many relatives as I could. Although that is my personal reason, many people create trees to be able to pass down stories, map family members who are tied to historical events, or even just as a hobby.</p>
 
           <h2><br/>The Data</h2>
           <p>The data in particular that we will be exploring is my personal family tree (for privacy purposes, I will be blurring names and dates).</p>
-          <p>The data was collected from family stories passed down to my parents, as well as asking my grandparents. Soon, I will be traveling to Turkey and while we are there, my father will be able to pull additional family records from the local gov. office.</p>
+          <p>The data was collected from family stories passed down to my parents, as well as asking my grandparents. Soon, I will be traveling to Turkey and while we are there, my father will be able to pull additional family records from the local government office.</p>
 
           <h2><br/>Understanding the Data</h2>
-          <p>For people with large families, trying to remember Uncle Ben's cousin's kids may be difficult. So users can go online to the family tree and check "oh yeah, their name is Liz".  </p>
+          <p>For people with large families, trying to remember Uncle Ben's cousin's half-kids from his divorced wife may be difficult. So users can go online to the family tree and check "oh yeah, their name is Liz".  </p>
           <p>People may also want to discover more of their family tree, which can be documented in the tree as more people are added. Tracing back a family tree may also reveal when their family immigrated to the US - through records at Ellis Island or otherwise.</p>
-          <p>Another feature of the Ancestry Tree is displaying relations of people to each other - I can see that my mom's cousin is actally my second cousin. You can click on a certain person on the tree and view the tree from their perspective. People that are not in that person's direct lineage become minimized.</p>
+          <p>Another feature of the Ancestry Tree is displaying relations of people to each other - I can see that my mom's cousin is actally my first cousin once removed. You can click on a certain person on the tree and view the tree from their perspective. People that are not in that person's direct lineage become minimized.</p>
           
           <h2><br/>Example of Insights</h2>
-          <!-- TODO -->
+          <div class="row mb-4">
+            <div class="col" >
+                <img src="images/wild_1.png" class="media-img img-fluid">
+            </div>
+            <div class="col">
+                <p>This screenshot is of the pop-up that shows when a user clicks on a family member. As you can see, only the most important details show - the name, birthday and death date.</p>
+            </div>
+          </div>
+          <div class="row mb-4">
+            <div class="col" >
+                <img src="images/wild_2.png" class="media-img img-fluid">
+            </div>
+            <div class="col">
+                <p>This page is what shows when a user clicks on the family member's profile. Unlike the simple pop-up, we are able to see more information about the family member - this is shown in timeline style, to try to map out the person's important milestones over the course of their life. The addition of the map makes it easy for people to visualize where a family member originated from.</p>
+            </div>
+          </div>
+          <div class="row mb-4">
+            <div class="col" >
+                <img src="images/wild_3.png" class="media-img img-fluid">
+            </div>
+            <div class="col">
+                <p>Clicking on a another family member can show you your relation to that person - for example, this is my first cousin once removed. Also note the mini family tree that shows underneath - making it easy to quickly reference who this person's parents are.</p>
+            </div>
+          </div>
+          <div class="row mb-4">
+            <div class="col" >
+                <img src="images/wild_4.png" class="media-img img-fluid">
+            </div>
+            <div class="col">
+                <p>When exploring the family tree, small arrows show up along some family members, indicating to the user that there are more relatives that can be expanded and explored. </p>
+                <p>If the user clicks, additional relatives can be viewed, instead of being in its minimized state. </p>
+            </div>
+          </div>
+          <div class="row mb-4">
+            <div class="col" >
+                <img src="images/wild_5.png" class="media-img img-fluid">
+            </div>
+            <div class="col">
+                <p>A great tool that helps the user not get lost in a huge tree is this little graph in the bottom left-hand corner. Essentially it is a minified version of the tree. The current family member that is clicked is in black. Pink/Blue helpe show the sex of the family members at a glance. This can help the user quickly navigate to a certain generation in their family tree.</p>
+            </div>
+          </div>
+          <div class="row mb-4">
+            <div class="col" >
+                <img src="images/wild_6.png" class="media-img img-fluid">
+            </div>
+            <div class="col">
+                <p>As can be seen by the red arrow, marriage is shown by red/blue connected lines, while gray lines indicate relatives.</p>
+            </div>
+          </div>
+          
 
           <h2><br/>Effective Design Choices </h2>
-          <p>Users can simply "Add Family Member" - no need to worry about connecting lines or creating boxes for the specific family member.</p>
-          <p>Color is used to show the sex of family members.</p>
-          <p>The most important information - name of the family member, photo, and living status is displayed on each member card.</p>
-          <p>Additional information about the family member can be viewed on their page.</p>
-          <!-- TODO -->
+          <ul>
+            <li>Users can simply "Add Family Member" - no need to worry about connecting lines or creating boxes for the specific family member.</li>
+            <li>Color is used to show the sex of family members.</li>
+            <li>The most important information - name of the family member, photo, and living status is displayed on each member card.</li>
+            <li>Additional information about the family member can be viewed on their page.</li>
+            <li>Finally, I like that Ancestry adheres to one of my favorite principles: "keep it simple stupid". Instead of maximizing use of color or creating complicated visualizations, the tree is incredibly simple to understand even without explanation.</li>
+          </ul>
 
           <h2><br/>Design Limitations</h2>
-          <p>As a tree gets bigger, it becomes more difficult to view the family tree as a whole. It may require the user to scroll to view more. While Ancestry Tree tries to account for this by minimizing branches of the tree that are not related, there may be a better way to approach large trees.</p>
-          <p>Ancestry Tree does not have the functions for printing out or exporting the data. <a href="https://www.toptenreviews.com/best-family-tree-maker" target="_blank">(Source)</a></p>
+          <ul>
+            <li>As a tree gets bigger, it becomes more difficult to view the family tree as a whole. It may require the user to scroll to view more. While Ancestry Tree tries to account for this by minimizing branches of the tree that are not related, there may be a better way to approach large trees.</li>
+            <li>Ancestry Tree does not have the functions for printing out or exporting the data. <a href="https://www.toptenreviews.com/best-family-tree-maker" target="_blank">(Source)</a></li>
+        </ul>
           <!-- TODO -->          
           
   
