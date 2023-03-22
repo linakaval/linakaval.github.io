@@ -1,3 +1,26 @@
+@media screen and (max-width: 600px) {
+  .img-fluid.index {
+    height: 600px !important;
+    width: auto !important;
+    max-width: none !important;
+    position: absolute;
+    left: -50px;
+    margin-bottom: 10px!important;
+  }
+  .row{
+    display: inline-block!important;
+  }
+  .bg-main1{
+    width: 100%!important;
+  }
+}
+
+.img-fluid{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .bg-main1{
     background-color: #ecb0e1;
 }
@@ -10,6 +33,7 @@
 .navbar{
     background-color: black;
 }
+
 
 navbar-brand{
     margin: 10px;
@@ -186,3 +210,6 @@ colors: #b57edc
     color: #999;
   }
   
+.container{
+  width: 75%;
+}

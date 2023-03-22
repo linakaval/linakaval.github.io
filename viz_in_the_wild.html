@@ -1,0 +1,59 @@
+<head>
+    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+  </head>
+  <body class="bg-main2">
+      <div id="nav-placeholder"></div>
+  
+      <div class="container py-4 w-75">
+        <div class="row p-5 mb-4 bg-main1 rounded-3">
+          <div class="container-fluid py-5">
+            <h1 class="display-5 fw-bold">Viz in the Wild - Exploring Ancestry Trees</h>
+          </div>
+        </div>
+        
+        <div class="row p-5 mb-2 bg-light rounded-3">
+          <h2>Introduction</h2>
+          <p>Ancestry Trees is a service that allows users to create family trees manually (or imported through hints from data that Ancestry collects from birth/death databases). Users are able to add family members to their tree, along with certain facts about the person, including name, birthday, death date, fun facts, pictures, etc. Previously, users would also just handwrite family trees - this could easily be destroyed in a house fire. Being able to upload pictures also means that old photos can be backed up in the family tree itself.</p>
+          <p>One of the main reasons I wanted to map out my family tree is because only my immediate family lives in the US - as my grandparents and parents die, I did not want to lose the connections to my family in Japan and Turkey. Therefore, before everyone passes away, I wanted to track as many relatives as I could. Although that is my personal reason, many people create trees to be able to pass down stories, map family members who are tied to historical events, or even just as a hobby.</p>
+
+          <h2><br/>The Data</h2>
+          <p>The data in particular that we will be exploring is my personal family tree (for privacy purposes, I will be blurring names and dates).</p>
+          <p>The data was collected from family stories passed down to my parents, as well as asking my grandparents. Soon, I will be traveling to Turkey and while we are there, my father will be able to pull additional family records from the local gov. office.</p>
+
+          <h2><br/>Understanding the Data</h2>
+          <p>For people with large families, trying to remember Uncle Ben's cousin's kids may be difficult. So users can go online to the family tree and check "oh yeah, their name is Liz".  </p>
+          <p>People may also want to discover more of their family tree, which can be documented in the tree as more people are added. Tracing back a family tree may also reveal when their family immigrated to the US - through records at Ellis Island or otherwise.</p>
+          <p>Another feature of the Ancestry Tree is displaying relations of people to each other - I can see that my mom's cousin is actally my second cousin. You can click on a certain person on the tree and view the tree from their perspective. People that are not in that person's direct lineage become minimized.</p>
+          
+          <h2><br/>Example of Insights</h2>
+          <!-- TODO -->
+
+          <h2><br/>Effective Design Choices </h2>
+          <p>Users can simply "Add Family Member" - no need to worry about connecting lines or creating boxes for the specific family member.</p>
+          <p>Color is used to show the sex of family members.</p>
+          <p>The most important information - name of the family member, photo, and living status is displayed on each member card.</p>
+          <p>Additional information about the family member can be viewed on their page.</p>
+          <!-- TODO -->
+
+          <h2><br/>Design Limitations</h2>
+          <p>As a tree gets bigger, it becomes more difficult to view the family tree as a whole. It may require the user to scroll to view more. While Ancestry Tree tries to account for this by minimizing branches of the tree that are not related, there may be a better way to approach large trees.</p>
+          <p>Ancestry Tree does not have the functions for printing out or exporting the data. <a href="https://www.toptenreviews.com/best-family-tree-maker" target="_blank">(Source)</a></p>
+          <!-- TODO -->          
+          
+  
+        </div>
+      </div>
+  
+  
+      <script>
+          $(function(){
+            $("#nav-placeholder").load("nav.html");
+          });
+      </script>
+  </body>
