@@ -19,8 +19,39 @@
         
         <div class="row p-5 mb-2 bg-light rounded-3">
           <h2>Introduction</h2>
-          Explain the motivation for your application.  What can it allow someone to understand? 
-1 section on the data: Describe the data and include a link. 
+          <p>The motivation behind this project was to be able to create a dashboard where information about the 311 calls made in Cincinnati in 2022 could be viewed.</p>
+          <p>You may be wondering, what is 311? 311 is the number used for all non-emergencies, whether you need police for a non-emergency issue, or for any service provided by the City. On the other hand, 911 is for medical, fire, and police emergencies only. <a href="https://www.cincinnati-oh.gov/ecc/about-ecc/311/#:~:text=What%20is%20the%20difference%20between,fire%2C%20and%20police%20emergencies%20only." target="_blank">Source: https://www.cincinnati-oh.gov/</a></p>
+          <p>Our visualization specifically allows users to visualize where calls are being made, what day of the week most calls are made, what zipcode of Cincinnati calls are made from, what type of calls are made, the change in the number of calls made per day over time, and the number of days between a call issue being created and when it is closed.</p>
+
+          <h2>The Data</h2>
+          <p>The data was sourced from <a href="https://data.cincinnati-oh.gov/Thriving-Neighborhoods/Cincinnati-311-Non-Emergency-Service-Requests/4cjh-bm8b" target="_blank">the City of Cincinnati's public dataset website</a>. This website is maintained by the City of Cincinnati, allowing the public to interact with the data collected - government transparency is an important issue in civics. Although there are many years of data included in this dataset, we reduced our scope to just 2022, as required in our project. Information about each data column could also be found on the page.</p>
+          <p>TODO MAY NEED TO MOVE THIS TO COMPONENTS SECTION When it came to grouping data from the status code (used in the map), we used the following <a href="https://cagis.hamilton-co.org/311/" target="_blank">website used for submitting 311 requests online</a> to create our custom categories. Some status codes fit into multiple categories - so we had to use our best judgement to decide what goes where.</p>
+     
+          <h2>Visualization Components</h2>
+          <h4>Map</h4>
+          <p>TODO don't feel like explaining rn</p>
+
+          <h4>Barchart - Calls by Week Day</h4>
+          <h5>View of the data</h5>
+          <p>TODO insert screenshots</p>
+          <h5>UI/Interactions</h5>
+          <p>Users can hover over each bar to view additional data for each bar.</p>
+          <p>TODO insert screenshots</p>
+          <p>Users can also filter other data by clicking on a bar. To remove the filter, the user can click again on the bar. This filter also works when the user clicks on the x-axis label for the bar.</p>
+
+          <h4>Barchart - Calls by Zipcode</h4>
+          <h5>View of the data</h5>
+          <p>TODO insert screenshots</p>
+          <h5>UI/Interactions</h5>
+          <p>Users can hover over each bar to view additional data for each bar.</p>
+          <p>TODO insert screenshots</p>
+          <p>Users can also filter other data by clicking on a bar. To remove the filter, the user can click again on the bar. This filter also works when the user clicks on the x-axis label for the bar.</p>
+
+
+
+design explanation for documentation: describe the colors you selected for these options and why you selected them, referencing whether the data is nominal, ordinal, quantitative, etc. and whether the color scheme is monochromatic, diverging, or categorical.
+
+
 1 section on the visualization components: Explain each view of the data, the GUI, etc.  Explain how you can interact with your application, and how the views update in response to these interactions. 
 This time, include a section with your design sketches and design justifications.
 1 section on what your application enables you to discover: Present some findings you arrive at with your application. 
