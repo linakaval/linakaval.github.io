@@ -23,18 +23,57 @@
           <p>You may be wondering, what is 311? 311 is the number used for all non-emergencies, whether you need police for a non-emergency issue, or for any service provided by the City. On the other hand, 911 is for medical, fire, and police emergencies only. <a href="https://www.cincinnati-oh.gov/ecc/about-ecc/311/#:~:text=What%20is%20the%20difference%20between,fire%2C%20and%20police%20emergencies%20only." target="_blank">Source: https://www.cincinnati-oh.gov/</a></p>
           <p>Our visualization specifically allows users to visualize where calls are being made, what day of the week most calls are made, what zipcode of Cincinnati calls are made from, what type of calls are made, the change in the number of calls made per day over time, and the number of days between a call issue being created and when it is closed.</p>
 
-          <h2>The Data</h2>
+          <h2><br/><br/>The Data</h2>
           <p>The data was sourced from <a href="https://data.cincinnati-oh.gov/Thriving-Neighborhoods/Cincinnati-311-Non-Emergency-Service-Requests/4cjh-bm8b" target="_blank">the City of Cincinnati's public dataset website</a>. This website is maintained by the City of Cincinnati, allowing the public to interact with the data collected - government transparency is an important issue in civics. Although there are many years of data included in this dataset, we reduced our scope to just 2022, as required in our project. Information about each data column could also be found on the page.</p>
           <p>TODO MAY NEED TO MOVE THIS TO COMPONENTS SECTION When it came to grouping data from the status code (used in the map), we used the following <a href="https://cagis.hamilton-co.org/311/" target="_blank">website used for submitting 311 requests online</a> to create our custom categories. Some status codes fit into multiple categories - so we had to use our best judgement to decide what goes where.</p>
      
-          <h2>Visualization Components</h2>
-          <h4>Map</h4>
-          <p>TODO don't feel like explaining rn
-            design explanation for documentation: describe the colors you selected for these options and why you selected them, referencing whether the data is nominal, ordinal, quantitative, etc. and whether the color scheme is monochromatic, diverging, or categorical.
+          <h2><br/><br/>Visualization Components</h2>
+          <h4><br/>Map</h4>
 
-          </p>
+          <table class="table table-sm">
+            <thead class="thead-dark">
+              <th>Dropdown Descriptor</th>
+              <th>Type of Data</th>
+              <th>Color Scheme Used</th>
+              <th>Type of Color Scheme</th>
+              <th>Explanation of Color Scheme</th>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Color by CALL TYPE</td>
+                <td>Nominal (Qualitative)</td>
+                <td>d3.schemePaired</td>
+                <td>Categorical</td>
+                <td>TODO</td>
+              </tr>
+              <tr>
+                <td>Color by TIME BETWEEN REQUESTED DATE AND UPDATED DATE</td>
+                <td>Interval (Quantitative)</td>
+                <td>Range from ["white", "#023020"]</td>
+                <td>Sequential/Monochromatic (Single-Hue)</td>
+                <td>TODO</td>
+              </tr>
+              <tr>
+                <td>Color by DAYS IN THE YEAR</td>
+                <td>Interval (Quantitative)</td>
+                <td>Range from ["white", "#023020"]</td>
+                <td>Sequential/Monochromatic (Single-Hue)</td>
+                <td>TODO</td>
+              </tr>
+              <tr>
+                <td>Color by PUBLIC AGENCY</td>
+                <td>Nominal (Qualitative)</td>
+                <td>d3.schemePaired</td>
+                <td>Categorical</td>
+                <td>TODO</td>
+              </tr>
+            </tbody>
+          </table>
 
-          <h4>Barchart - Calls by Week Day</h4>
+
+          <p>TODO - describe the colors you selected for these options and why you selected them</p>
+
+          <h4><br/>Barchart - Calls by Week Day</h4>
           <h5>View of the data</h5>
           <p>TODO insert screenshots</p>
           <h5>UI/Interactions</h5>
@@ -43,7 +82,7 @@
           <p>Users can also filter other data by clicking on a bar. To remove the filter, the user can click again on the bar. This filter also works when the user clicks on the x-axis label for the bar.</p>
 
 
-          <h4>Barchart - Calls by Zipcode</h4>
+          <h4><br/>Barchart - Calls by Zipcode</h4>
           <h5>View of the data</h5>
           <p>TODO insert screenshots</p>
           <h5>UI/Interactions</h5>
@@ -52,7 +91,7 @@
           <p>Users can also filter other data by clicking on a bar. To remove the filter, the user can click again on the bar. This filter also works when the user clicks on the x-axis label for the bar.</p>
 
 
-          <h4>Barchart - Calls by Category</h4>
+          <h4><br/>Barchart - Calls by Category</h4>
           <h5>View of the data</h5>
           <p>TODO insert screenshots</p>
           <h5>UI/Interactions</h5>
@@ -61,7 +100,7 @@
           <p>Users can also filter other data by clicking on a bar. To remove the filter, the user can click again on the bar. This filter also works when the user clicks on the x-axis label for the bar.</p>
 
 
-          <h4>Timeline - Calls over time</h4>
+          <h4><br/>Timeline - Calls over time</h4>
           <h5>View of the data</h5>
           <p>This cluster of components all work together to show time series data to the user. The first component is the <a href="https://gramener.github.io/visual-vocabulary-vega/#/Change-over-Time/" target="_blank">calendar heatmap</a>. What I like about this visualization is that you can see different trends at once. For example, by focusing on the rows, I can see that Sundays and Saturdays have the least calls. This makes sense - for a non-emergency line, more people are likely to make calls during the workweek about a traffic light being down or water pipe leak.</p>
           <p>Another insight the user can gain is being able to see when the most calls were made in the whole year, by looking for the darkest rectangle in the heatmap. This looks to be 2/23/2022 with 745 calls.</p>
@@ -76,7 +115,7 @@
           <p>TODO insert screenshots</p>
 
 
-          <h4>Histogram - Days Between Call Received and Issue Updated</h4>
+          <h4><br/>Histogram - Days Between Call Received and Issue Updated</h4>
           <h5>View of the data</h5>
           <p>TODO insert screenshots</p>
           <h5>UI/Interactions</h5>
@@ -85,17 +124,17 @@
 
 
 
-          <h2>Sketching and Design Justifications</h2>
+          <h2><br/><br/>Sketching and Design Justifications</h2>
           <p>TODO</p>
 
 
 
-          <h2>Insights</h2>
+          <h2><br/><br/>Insights</h2>
           <p>Using the timeline, we can also see a pattern - from 1/25/2022 to 2/4/2022, it is much lighter (meaning less calls were made). While I don't see anything in the news that may explain the lack of calls, the user could maybe consider the scenario that perhaps the 311 call system was down during this period. While we can't know for sure, it is something that the user may be interested in diving further.</p>
           <p>TODO - 1 section on what your application enables you to discover: Present some findings you arrive at with your application. </p>
 
 
-          <h2>Process</h2>
+          <h2><br/><br/>Process</h2>
           <h5>Libraries used</h5>
           <ul>
             <li><a href="https://d3js.org" target="_blank">D3.js</a> - JavaScript library for manipulating documents based on data</li>
@@ -109,11 +148,42 @@
 
 
 
-          <h2>Demo Video</h2>
+          <h2><br/><br/>Demo Video</h2>
           <p>TODO - Include a 2-3 minute demo video, showing your application in action.  The easiest way to record this is with a screen capture tool, which also captures audio- such as Quicktime.  Use a voiceover or video captions to explain your application.  Demo videos should be sufficient on their own, but can reference your documentation.  Include the name of the project, your name, the project components, and how your application works.  You can present it on your webpage or on youtube, but linked on your webpage. 
           </p>
 
-          <h2>Division of work</h2>
+          <h2><br/><br/>Division of work</h2>
+          <table class="table table-sm">
+            <thead class="thead-dark">
+              <th>Name</th>
+              <th>Contribution</th>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Bryan Cora</td>
+                <td>MAJOR data cleaning<br/>
+                    Timeline - heatmap ideation/creation<br/>
+                    TODO
+                </td>
+              </tr>
+              <tr>
+                <td>Daniel Hackney</td>
+                <td>Cleanup of map<br/>
+                    TODO
+                </td>
+              </tr>
+              <tr>
+                <td>Lina Kaval</td>
+                <td>Initial map creation <br/>
+                    Timeline - heatmap ideation/creation</td>
+                    TODO
+              </tr>
+              <tr>
+                <td>Samantha Shaw</td>
+                <td>TODO</td>
+              </tr>
+            </tbody>
+          </table>
           <p>TODO - This time, document who on your team did which component of the project.  Ex.  If someone worked on the data, and on bar charts, list their effort on these components. 
           </p>
         </div>
