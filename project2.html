@@ -29,7 +29,10 @@
      
           <h2>Visualization Components</h2>
           <h4>Map</h4>
-          <p>TODO don't feel like explaining rn</p>
+          <p>TODO don't feel like explaining rn
+            design explanation for documentation: describe the colors you selected for these options and why you selected them, referencing whether the data is nominal, ordinal, quantitative, etc. and whether the color scheme is monochromatic, diverging, or categorical.
+
+          </p>
 
           <h4>Barchart - Calls by Week Day</h4>
           <h5>View of the data</h5>
@@ -39,6 +42,7 @@
           <p>TODO insert screenshots</p>
           <p>Users can also filter other data by clicking on a bar. To remove the filter, the user can click again on the bar. This filter also works when the user clicks on the x-axis label for the bar.</p>
 
+
           <h4>Barchart - Calls by Zipcode</h4>
           <h5>View of the data</h5>
           <p>TODO insert screenshots</p>
@@ -46,6 +50,7 @@
           <p>Users can hover over each bar to view more specific data (exact call count) for each bar.</p>
           <p>TODO insert screenshots</p>
           <p>Users can also filter other data by clicking on a bar. To remove the filter, the user can click again on the bar. This filter also works when the user clicks on the x-axis label for the bar.</p>
+
 
           <h4>Barchart - Calls by Category</h4>
           <h5>View of the data</h5>
@@ -56,17 +61,61 @@
           <p>Users can also filter other data by clicking on a bar. To remove the filter, the user can click again on the bar. This filter also works when the user clicks on the x-axis label for the bar.</p>
 
 
+          <h4>Timeline - Calls over time</h4>
+          <h5>View of the data</h5>
+          <p>This cluster of components all work together to show time series data to the user. The first component is the <a href="https://gramener.github.io/visual-vocabulary-vega/#/Change-over-Time/" target="_blank">calendar heatmap</a>. What I like about this visualization is that you can see different trends at once. For example, by focusing on the rows, I can see that Sundays and Saturdays have the least calls. This makes sense - for a non-emergency line, more people are likely to make calls during the workweek about a traffic light being down or water pipe leak.</p>
+          <p>Another insight the user can gain is being able to see when the most calls were made in the whole year, by looking for the darkest rectangle in the heatmap. This looks to be 2/23/2022 with 745 calls.</p>
+          <p>We can also see an abnormally light day surrounded by dark days in November. By hovering on the light day, we can see that it was Thanksgiving Day - a holiday so not many people would make calls.</p>
+          
+          <p><br/><br/>The other component is the line chart of the time series data with calls made over the year. WHile it may be a boring way to display information, it is something that users are used to viewing and analyzing. We can confirm that the highest call count made in 2022 was 745 calls.</p>
+          <p>The user can also gain insight on whether calls increase over the year. There is no obvious trend to indicate that is true.</p>
 
-design explanation for documentation: describe the colors you selected for these options and why you selected them, referencing whether the data is nominal, ordinal, quantitative, etc. and whether the color scheme is monochromatic, diverging, or categorical.
+          <h5>UI/Interactions</h5>
+          <p>Users can hover over each rectangle on the calendar heatmap to view more specific data (exact call count and date) for each rectangle.</p>
+          <p>Users can hover over points on the line chart to view more specific data (exact call count) for each point.</p>
+          <p>TODO insert screenshots</p>
 
 
-1 section on the visualization components: Explain each view of the data, the GUI, etc.  Explain how you can interact with your application, and how the views update in response to these interactions. 
-This time, include a section with your design sketches and design justifications.
-1 section on what your application enables you to discover: Present some findings you arrive at with your application. 
-1 section on your process- what libraries did you use?  How did you structure your code?  How can you access it and run it?  Link to your code (and the live application, if it is deployed online). 
-Include a 2-3 minute demo video, showing your application in action.  The easiest way to record this is with a screen capture tool, which also captures audio- such as Quicktime.  Use a voiceover or video captions to explain your application.  Demo videos should be sufficient on their own, but can reference your documentation.  Include the name of the project, your name, the project components, and how your application works.  You can present it on your webpage or on youtube, but linked on your webpage. 
-This time, document who on your team did which component of the project.  Ex.  If someone worked on the data, and on bar charts, list their effort on these components. 
+          <h4>Histogram - Days Between Call Received and Issue Updated</h4>
+          <h5>View of the data</h5>
+          <p>TODO insert screenshots</p>
+          <h5>UI/Interactions</h5>
+          <p>Users can hover over each bar to view more specific data (number of days to resolution and exact call count) for each bar.</p>
+          <p>Users can gain insight on the data by seeing that most calls get resolved within 5 days. Users can also see that the longest time it takes to resolve an issue is around 55 days.</p>
 
+
+
+          <h2>Sketching and Design Justifications</h2>
+          <p>TODO</p>
+
+
+
+          <h2>Insights</h2>
+          <p>Using the timeline, we can also see a pattern - from 1/25/2022 to 2/4/2022, it is much lighter (meaning less calls were made). While I don't see anything in the news that may explain the lack of calls, the user could maybe consider the scenario that perhaps the 311 call system was down during this period. While we can't know for sure, it is something that the user may be interested in diving further.</p>
+          <p>TODO - 1 section on what your application enables you to discover: Present some findings you arrive at with your application. </p>
+
+
+          <h2>Process</h2>
+          <h5>Libraries used</h5>
+          <ul>
+            <li><a href="https://d3js.org" target="_blank">D3.js</a> - JavaScript library for manipulating documents based on data</li>
+            <li><a href="https://www.npmjs.com/package/d3-scale-chromatic" target="_blank">d3-scale-chromatic</a></li>
+            <li><a href="https://leaflet.github.io/Leaflet.draw/docs/leaflet-draw-latest.html" target="_blank">Leaflet-Draw</a> - Javascript library for map data</li>
+          </ul>
+          <p>We also used map backgrounds from Stamen, OpenStreetMap, and Stadia Maps. </p>
+          <p>Our code was structured with our classes having initVis(), updateVis(), and renderVis() functions to make re-rendering vizzes easier.</p>
+          <p>TODO - 1 section on your process- what libraries did you use?  How did you structure your code?  How can you access it and run it?  Link to your code (and the live application, if it is deployed online). 
+          </p>
+
+
+
+          <h2>Demo Video</h2>
+          <p>TODO - Include a 2-3 minute demo video, showing your application in action.  The easiest way to record this is with a screen capture tool, which also captures audio- such as Quicktime.  Use a voiceover or video captions to explain your application.  Demo videos should be sufficient on their own, but can reference your documentation.  Include the name of the project, your name, the project components, and how your application works.  You can present it on your webpage or on youtube, but linked on your webpage. 
+          </p>
+
+          <h2>Division of work</h2>
+          <p>TODO - This time, document who on your team did which component of the project.  Ex.  If someone worked on the data, and on bar charts, list their effort on these components. 
+          </p>
         </div>
       </div>
   
