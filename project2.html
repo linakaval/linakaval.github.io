@@ -25,12 +25,22 @@
 
           <h2><br/><br/>The Data</h2>
           <p>The data was sourced from <a href="https://data.cincinnati-oh.gov/Thriving-Neighborhoods/Cincinnati-311-Non-Emergency-Service-Requests/4cjh-bm8b" target="_blank">the City of Cincinnati's public dataset website</a>. This website is maintained by the City of Cincinnati, allowing the public to interact with the data collected - government transparency is an important issue in civics. Although there are many years of data included in this dataset, we reduced our scope to just 2022, as required in our project. Information about each data column could also be found on the page.</p>
-          <p>TODO MAY NEED TO MOVE THIS TO COMPONENTS SECTION When it came to grouping data from the status code (used in the map), we used the following <a href="https://cagis.hamilton-co.org/311/" target="_blank">website used for submitting 311 requests online</a> to create our custom categories. Some status codes fit into multiple categories - so we had to use our best judgement to decide what goes where.</p>
+          <p>When it came to grouping data from the status code (used in the map), we used the following <a href="https://cagis.hamilton-co.org/311/" target="_blank">website used for submitting 311 requests online</a> to create our custom categories. Some status codes fit into multiple categories - so we had to use our best judgement to decide what goes where.</p>
      
           <h2><br/><br/>Visualization Components</h2>
-          <h4><br/>Map</h4>
 
-          <table class="table table-sm">
+          <h3>Full Dashboard View</h3>
+          <img src="images/project2/full_dashboard.png" class="proj1 media-img img-fluid ">
+          <p>TODO explain filtering</p>
+
+
+          <h3><br/>Map</h3>
+          <img src="images/project2/map.png" class="proj1 media-img img-fluid ">
+
+          <p>TODO info about map</p>
+
+          <h4>Category and color decisions</h4>
+          <table class="table table-sm table-primary">
             <thead class="thead-dark">
               <th>Dropdown Descriptor</th>
               <th>Type of Data</th>
@@ -44,45 +54,67 @@
                 <td>Nominal (Qualitative)</td>
                 <td>d3.schemePaired</td>
                 <td>Categorical</td>
-                <td>TODO</td>
+                <td>Because we were working with qualitative data, we knew we had to use a categorical color scheme. We used d3.schemePaired because it had the most color options for categorical data.</td>
               </tr>
               <tr>
                 <td>Color by TIME BETWEEN REQUESTED DATE AND UPDATED DATE</td>
                 <td>Interval (Quantitative)</td>
                 <td>Range from ["white", "#023020"]</td>
                 <td>Sequential/Monochromatic (Single-Hue)</td>
-                <td>TODO</td>
+                <td>Interval data is best paired with a sequential scale. We did not use a diverging scale because there was no midpoint in our data. We chose colors that were blue to match the rest of the color scheme we were using across the dashboard.
+                </td>
               </tr>
               <tr>
                 <td>Color by DAYS IN THE YEAR</td>
                 <td>Interval (Quantitative)</td>
                 <td>Range from ["white", "#023020"]</td>
                 <td>Sequential/Monochromatic (Single-Hue)</td>
-                <td>TODO</td>
+                <td>Interval data is best paired with a sequential scale. We did not use a diverging scale because there was no midpoint in our data.</td>
               </tr>
               <tr>
                 <td>Color by PUBLIC AGENCY</td>
                 <td>Nominal (Qualitative)</td>
                 <td>d3.schemePaired</td>
                 <td>Categorical</td>
-                <td>TODO</td>
+                <td>Because we were working with qualitative data, we knew we had to use a categorical color scheme. We used d3.schemePaired because it had the most color options for categorical data. We chose colors that were blue to match the rest of the color scheme we were using across the dashboard.
+                </td>
               </tr>
             </tbody>
           </table>
 
 
-          <p>TODO - describe the colors you selected for these options and why you selected them</p>
-
-          <h4><br/>Barchart - Calls by Week Day</h4>
-          <h5>View of the data</h5>
-          <p>TODO insert screenshots</p>
-          <h5>UI/Interactions</h5>
-          <p>Users can hover over each bar to view more specific data (exact call count) for each bar.</p>
-          <p>TODO insert screenshots</p>
-          <p>Users can also filter other data by clicking on a bar. To remove the filter, the user can click again on the bar. This filter also works when the user clicks on the x-axis label for the bar.</p>
+          <h3><br/><br/>Barcharts</h3>
+          <p>The visualizations below all use the barchart.js</p>
+          <div class="d-flex flex-row">
+            <div class="p-1"><img src="images/project2/barchart_zipcode.png" class="proj1flex media-img img-fluid"></div>
+            <div class="p-1"><img src="images/project2/barchart_weekday.png" class="proj1flex media-img img-fluid"></div>
+            <div class="p-1"><img src="images/project2/barchart_category.png" class="proj1flex media-img img-fluid"></div>
+          </div>
 
 
-          <h4><br/>Barchart - Calls by Zipcode</h4>
+          <h4><br/><br/><br/><br/>1. Barchart - Calls by Week Day</h4>
+          <h5><br/>UI/Interactions</h5>
+          <div class="row">
+            <div class="col" >
+              <img src="images/project2/zipcode_hover.png" class="proj1 media-img img-fluid">  
+            </div>
+            <div class="col">
+              <p><br/><br/>Users can hover over each bar to view more specific data (exact call count) for each bar.</p>
+    
+            </div>
+          </div>
+          <div class="row">
+            <div class="col" >
+              <img src="images/project2/zipcode_hover.png" class="proj1 media-img img-fluid">  
+            </div>
+            <div class="col">
+              <p><br/><br/>Users can also filter other data by clicking on a bar. To remove the filter, the user can click again on the bar. This filter also works when the user clicks on the x-axis label for the bar.</p>
+            </div> 
+          </div>
+         
+
+
+          <h4><br/>2. Barchart - Calls by Zipcode</h4>
           <h5>View of the data</h5>
           <p>TODO insert screenshots</p>
           <h5>UI/Interactions</h5>
@@ -142,9 +174,8 @@
             <li><a href="https://leaflet.github.io/Leaflet.draw/docs/leaflet-draw-latest.html" target="_blank">Leaflet-Draw</a> - Javascript library for map data</li>
           </ul>
           <p>We also used map backgrounds from Stamen, OpenStreetMap, and Stadia Maps. </p>
-          <p>Our code was structured with our classes having initVis(), updateVis(), and renderVis() functions to make re-rendering vizzes easier.</p>
-          <p>TODO - 1 section on your process- what libraries did you use?  How did you structure your code?  How can you access it and run it?. 
-          </p>
+          <p>Our code was structured with our classes having initVis(), updateVis(), and renderVis() functions to make re-rendering vizzes easier. We assigned work using GitHub Issues and made pull requests when we had updates. Each pull request required a reviewer so that we could keep track of each other's work and do quality checks.</p>
+          <p>To run the code, run "python3 -m http.server 8000" in the terminal within the project folder. This requires the http.server library.</p>
           <p>The code can be <a href="https://github.com/brinwiththevlin/datavis_project_2" target="_blank">viewed on Github.</a></p>
 
 
