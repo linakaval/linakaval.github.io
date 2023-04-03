@@ -30,27 +30,43 @@
           <h2><br/><br/>Visualization Components</h2>
 
           <h3>Full Dashboard View</h3>
-          <img src="images/project2/full_dashboard.png" class="proj1 media-img img-fluid ">
-          <p><br/>The whole dashboard can be filtered using the barcharts and brush. The filtering updates to every other visualization on the dashboard. At the bottom of the page, there is a button to clear filters and display the number of calls that are currently shown on the page.</p>
-          <img src="images/project2/filtering.png" class="proj1 media-img img-fluid ">
-          <p><br/>Most of the visualizations have an "i" button to display info to the user on how to use/interpret the visualization.</p>
-          <img src="images/project2/info.png" class="proj1 media-img img-fluid ">
-
-
+          <img src="images/project2/full_dashboard.png" class="proj1 media-img img-fluid">
+          <div class="row">
+            <div class="col">
+              <img src="images/project2/filtering.png" class="proj1 media-img img-fluid ">
+            </div>
+            <div class="col">
+              <p><br/><br/>The whole dashboard can be filtered using the barcharts and brush. The filtering updates to every other visualization on the dashboard. At the bottom of the page, there is a button to clear filters and display the number of calls that are currently shown on the page.</p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">
+              <img src="images/project2/info.png" class="proj1 media-img img-fluid ">
+            </div>
+            <div class="col">
+              <p><br/><br/>Most of the visualizations have an "i" button to display info to the user on how to use/interpret the visualization.</p>
+            </div>
+          </div>
 
 
           <h3><br/><br/>Map</h3>
           <h5>View of the data</h5>
           <img src="images/project2/map.png" class="proj1 media-img img-fluid ">
-
           <h5><br/><br/>UI/Interactions</h5>
+          <div class="row">
+            <div class="col" >
+              <img src="images/project2/polygon.png" class="proj1 media-img img-fluid">  
+            </div>
+            <div class="col">
+              <p><br/><br/>Multi-Polygon Selection Filtering - Users can draw multiple polygons on the map to only include calls made in those regions. These shapes can also be edited and deleted.</p>
+            </div>
+          </div>
           <div class="row">
             <div class="col" >
               <img src="images/project2/map_hover.png" class="proj1 media-img img-fluid">  
             </div>
             <div class="col">
               <p><br/><br/>Tooltip - Users can hover over each data point to view more information about a specific call.</p>
-    
             </div>
           </div>
           <div class="row">
@@ -114,7 +130,7 @@
 
 
           <h3><br/><br/>Barcharts</h3>
-          <p>The visualizations below all use the barchart.js</p>
+          <p>The visualizations below all use the barchart.js file.</p>
           <div class="d-flex flex-row">
             <div class="p-1"><img src="images/project2/barchart_zipcode.png" class="proj1flex media-img img-fluid"></div>
             <div class="p-1"><img src="images/project2/barchart_weekday.png" class="proj1flex media-img img-fluid"></div>
@@ -130,7 +146,6 @@
             </div>
             <div class="col">
               <p><br/><br/>Users can hover over each bar to view more specific data (exact call count) for each bar.</p>
-    
             </div>
           </div>
           <div class="row">
@@ -236,9 +251,14 @@
 
           <h3><br/><br/><br/>Word Cloud</h3>
           <h5>View of the data</h5>
-          <p>This word cloud gets the statusses of each call and creates a frequency table of the most popular words. Stop words such as "is", "or", were filtered out so that the user could gain value from the word cloud.</p>
-          <img src="images/project2/word_cloud.png" class="proj1 media-img img-fluid">  
-
+          <div class="row">
+            <div class="col">
+              <img src="images/project2/word_cloud.png" class="proj1 media-img img-fluid">  
+            </div>
+            <div class="col">
+              <p><br/><br/>This word cloud gets the statusses of each call and creates a frequency table of the most popular words. Stop words such as "is", "or", were filtered out so that the user could gain value from the word cloud.</p>   
+            </div>
+          </div>
 
 
           <h2><br/><br/>Sketching and Design Justifications</h2>
@@ -250,14 +270,61 @@
           <img src="images/project2/sketch_map_details.png" class="proj1 media-img img-fluid"> 
           <p>Below is the brainstorming of our timeline component. We felt that traditional visualizations like line charts or bar charts wouldn't be able to tell us as much information as another kind of visualization. That is when we came up with the heatmap. This allows the user to see trends over both weekdays and across the year.</p>
           <img src="images/project2/sketch_timeline.png" class="proj1 media-img img-fluid">  
- 
+
+          <h3>Color Palette</h3>
+          <p>We decided with a neutral blue color to use for our entire dashboard. Sticking to one color palette creates uniformity within our dashboard. This was important because with all of us working on different parts of the dashboard, we needed to make sure we could tie up all the work into looking like it fit together, rather than some things we just threw onto a screen.</p>
+          <img src="images/project2/palette.png" class="proj1 media-img img-fluid">
 
 
           <h2><br/><br/>Insights</h2>
-          <p>Using the timeline, we can see a pattern - from 1/25/2022 to 2/4/2022, it is much lighter (meaning fewer calls were made). While I don't see anything in the news that may explain the lack of calls, the user could maybe consider the scenario that perhaps the 311 call system was down during this period. This is something that the user may be interested in diving into further.</p>
-          <p><br/><br/>Users can gain insight on the data by seeing that most calls get resolved within 5 days. Users can also see that the longest time it takes to resolve an issue is around 55 days.</p>
-
-          <p>TODO - 1 section on what your application enables you to discover: Present some findings you arrive at with your application. </p>
+          <div class="row">
+            <div class="col">
+              <img src="images/project2/insights_mystery_jan.png" class="proj1 media-img img-fluid">
+            </div>
+            <div class="col">
+              <p><br/><br/>Using the timeline, we can see a pattern - from 1/25/2022 to 2/4/2022, it is much lighter (meaning fewer calls were made). While I don't see anything in the news that may explain the lack of calls, the user could maybe consider the scenario that perhaps the 311 call system was down during this period. This is something that the user may be interested in diving into further.</p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">
+              <img src="images/project2/insights_5days.png" class="proj1 media-img img-fluid">
+            </div>
+            <div class="col">
+              <p><br/><br/>Users can gain insight on the data by seeing that most calls get resolved within 5 days. Users can also see that the longest time it takes to resolve an issue is around 55 days.</p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">
+              <img src="images/project2/insights_5days.png" class="proj1 media-img img-fluid">
+            </div>
+            <div class="col">
+              <p><br/><br/>Curiously enough there are significantly less 311 calls on the weekends. This can be seen either in the daily barchart or the timeline/heatmap. I suspect that this might arise from people not being out or concerned about non emergencies on the weekend.  Another contributing factor might be that people are more inclined to call it in on the way to work or first thing in the morning then when they are out with family.</p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">
+              <img src="images/project2/insights_empty_map.png" class="proj1 media-img img-fluid">
+            </div>
+            <div class="col">
+              <p><br/><br/>There are many discoveries users of our application could make by filtering and observing the data. One immediate observation that can be made is by looking at the map view. It is clear to see that some communities do not utilize the public Cincinnati 311 call system at all, despite being within the greater Cincinnati area.</p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">
+              <img src="images/project2/insights_thanksgiving.png" class="proj1 media-img img-fluid">
+            </div>
+            <div class="col">
+              <p><br/><br/>As previously mentioned, users will quickly notice that far fewer calls are made on weekends than weekdays, and during the latter half of January and first half of February the system may have been down. Far more calls are made relating to public services than any other category, and far fewer calls are made on holidays (see Thanksgiving below).</p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">
+              <img src="images/project2/insights_cars.png" class="proj1 media-img img-fluid">
+            </div>
+            <div class="col">
+              <p><br/><br/>Additionally, users may notice trends in the data as they explore variations in the word cloud. For instance, nearly all calls in the “Police” category involve cars. </p>
+            </div>
+          </div>
 
 
           <h2><br/><br/>Process</h2>
@@ -276,8 +343,10 @@
 
 
           <h2><br/><br/>Demo Video</h2>
-          <p>TODO - Include a 2-3 minute demo video, showing your application in action.  The easiest way to record this is with a screen capture tool, which also captures audio- such as Quicktime.  Use a voiceover or video captions to explain your application.  Demo videos should be sufficient on their own, but can reference your documentation.  Include the name of the project, your name, the project components, and how your application works.  You can present it on your webpage or on youtube, but linked on your webpage. 
-          </p>
+          <div class="col embed-responsive embed-responsive-16by9" >
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/jPufxNHecik" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>  
+          </div>
+  
 
           <h2><br/><br/>Division of work</h2>
           <table class="table table-sm">
@@ -289,12 +358,19 @@
               <tr>
                 <td>Bryan Cora</td>
                 <td>MAJOR data cleaning<br/>
-                    TODO
+                  Timeline Heat map<br/>
+                  Description word cloud<br/>
                 </td>
               </tr>
               <tr>
                 <td>Daniel Hackney</td>
-                <td>TODO
+                <td>Calls by Weekday Barchart<br/>
+                  Call Timeline view and filtering<br/>
+                  Barchart multi-select filtering<br/>
+                  All visualizations affected by filtering<br/>
+                  Map Background dropdown select<br/>
+                  Map Brushing/Linking/Filtering<br/>
+                  Total call count display and clear filters option<br/>
                 </td>
               </tr>
               <tr>
@@ -305,17 +381,20 @@
                     Timeline - heatmap ideation/creation <br/>
                     Added "Other" column to zipcode barchart <br/>
                     Initial word cloud creation <br/>
-                    TODO
                 </td>
               </tr>
               <tr>
                 <td>Samantha Shaw</td>
-                <td>TODO</td>
+                <td>Zipcode barchart<br/>
+                  Issue Resolution Time histogram<br/>
+                  Site layout cleanup<br/>
+                  Map layout design<br/>
+                  Info buttons on charts<br/>
+                  Heatmap color palette<br/>
+                </td>
               </tr>
             </tbody>
           </table>
-          <p>TODO - This time, document who on your team did which component of the project.  Ex.  If someone worked on the data, and on bar charts, list their effort on these components. 
-          </p>
         </div>
       </div>
   
