@@ -21,11 +21,15 @@
             <h2>Introduction</h2>
             <p>As fans of the show <a href="https://en.wikipedia.org/wiki/Avatar:_The_Last_Airbender" target="_blank">Avatar: The Last Airbender</a>, my team decided to delve deeper into the realm of the Fire Nation's reign. Users can view information about which bender type talks the most in the show, what the main characters were saying, who talked to who, and the number of episodes the characters appeared in, in one simple visualization. We used plenty of imagery from the show to make it even easier for fans to navigate.</p>
 
-            <h2>The Data</h2>
-            <p>Our team sourced the data using <a href="https://avatar.fandom.com/wiki/Avatar_Wiki:Transcripts" target="_blank">this page combining all the scripts on the Avatar Fandom wiki</a>, creating a custom script to parse all the data.</p>
-            <p><a href="https://github.com/corncob567/Avatar-TV-Time/blob/main/notebooks/avatar_scapper.py" target="_blank">Our scraper file can be viewed here</a> - to summarize, the scraper was written in Python to scrape each transcript on the page previously mentioned. Each page features an html table of the whole script, with the character and what they said, along with extraneous information such as stage instructions. Each episode transcript was saved into a Pandas Dataframe with season, episode, character, and dialog, added in the order of the transcript.</p>
+            <h2><br/><br/>The Data</h2>
+            <p>Our team sourced the data using <a href="https://avatar.fandom.com/wiki/Avatar_Wiki:Transcripts" target="_blank">this page compiling all the scripts on the Avatar Fandom wiki</a>, creating a custom script to parse all the data.</p>
+            <p><a href="https://github.com/corncob567/Avatar-TV-Time/blob/main/notebooks/avatar_scapper.py" target="_blank">Our scraper file can be viewed here</a> - to summarize, the scraper was written in Python to scrape each transcript on the page previously mentioned. Each page features an html table of the whole script, with the character and what they said, along with extraneous information such as stage instructions. An http request was made to each page to grab the contents of the page body. Each episode transcript was saved into a Pandas Dataframe with season, episode, character, and dialog, added in the order of the transcript.</p>
             <p>The data was saved to a csv file containing every dataframe row, <a href="https://github.com/corncob567/Avatar-TV-Time/blob/main/data/avatar_transcripts.csv" target="_blank">viewawble here</a>.</p>
 
+
+            <h2><br/><br/>Visualization Components</h2>
+
+            <h3>Full Dashboard View</h3>
             
 
 
@@ -38,9 +42,8 @@
 
 
 
+
             <!--
-            1 section on the data: Describe the data and include a link. 
-            *** Since you will have done more work for this project to obtain and process the data, describe your methods and include processing scripts. 
             1 section on the visualization components: Explain each view of the data, the GUI, etc.  Explain how you can interact with your application, and how the views update in response to these interactions. 
             Include design sketches and design justifications 
             1 section on what your application enables you to discover: Present some findings you arrive at with your application.  Include screen shots to illustrate.
