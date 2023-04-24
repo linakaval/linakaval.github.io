@@ -81,13 +81,72 @@
             <h3><br/><br/>2A. Table - Analyzing what the characters say</h3>
             <div class="row">
                 <div class="col" >
-                  <img src="images/project3/words.png" class="proj1 media-img img-fluid">  
+                  <img src="images/project3/table.gif" class="proj1 media-img img-fluid">
                 </div>
                 <div class="col">
-                  <p><br/><br/>This visualization helps the user explore what the characters are talking about in the show.</p>
-                  <p>We combined a table and the word cloud into the same section because of how they both pertain to exact phrases from the show.</p>
+                  <p><br/><br/>The default view of the table allows the user to view each episode from each season and understand who was talking and how many words they spoke. Users can scroll down the table to view all the information.</p>
                 </div>
             </div>
+            <div class="row">
+                <div class="col" >
+                  <img src="images/project3/table_choosecharacter.gif" class="proj1 media-img img-fluid">
+                </div>
+                <div class="col">
+                  <p><br/><br/>When a character is selected, the table updates to show only the episodes in which they appeared. The reason why we placed this next to the word cloud is because the word cloud will also update - this will be covered later.</p>
+                  <p>If one of the main characters is selected, a blurb also shows of their most said phrases - this was manually found using <a href="https://www.online-utility.org/text/analyzer.jsp">this word text analysis website</a>, allowing us to find key phrases after pasting in all of the character's lines.</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col" >
+                  <img src="images/project3/table_modal.png" class="proj1 media-img img-fluid">
+                </div>
+                <div class="col">
+                  <p><br/><br/>Additionally, once a character is selected, clicking on the row allows the user to see all of the character's lines from that episode. A popup appears with another table containing all of the lines from the episode.</p>
+                </div>
+            </div>
+            <div class="row">
+                <h4>Design Sketches/Justifications</h4>
+                <div class="col">
+                  <img src="images/project3/table_design.png" class="proj1 media-img img-fluid">  
+                </div>
+                <div class="col">     
+                    <p><br/><br/>The mockup was created while thinking about the requirements of what we had to show. The word cloud would show the words spoken by character but we still needed a way to be able to view the character's lines by season and episode. </p>
+                    <p>The popup is the only way users can get the full lines spoken by the characters, so including it added another dimension of data to our visualization.</p>
+                </div>
+            </div>
+
+
+            <h3><br/><br/>2B. Word Cloud - Analyzing what the characters say</h3>
+            <div class="row">
+                <div class="col" >
+                  <img src="images/project3/wordcloud.png" class="proj1 media-img img-fluid">
+                </div>
+                <div class="col">
+                  <p><br/><br/>The default view of the word cloud features all the words ever said in the whole series. Clicking on a season (and optionally followed by an episode selection), filters out the words to just that season/episode.</p>
+                  <p>Stop words and other fillers were removed <a href="https://github.com/corncob567/Avatar-TV-Time/blob/main/data/stop_words.csv" target="_blank">according to this list</a>.</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col" >
+                  <img src="images/project3/wordcloud_sokka.png" class="proj1 media-img img-fluid">
+                </div>
+                <div class="col">
+                  <p><br/><br/>Additionally, choosing a character will filter the word clouds to only words spoken by that character. Pictured: filtering based on Sokka</p>
+                </div>
+            </div>
+
+            <!-- <h3><br/><br/>3. Chord Diagram - Who Talked To Who?</h3>
+            <div class="row">
+                <div class="col" >
+                  <img src="images/project3/chord.png" class="proj1 media-img img-fluid">
+                </div>
+                <div class="col">
+                  <p><br/><br/></p>
+                </div>
+            </div> -->
+
+
+
 
 
 
