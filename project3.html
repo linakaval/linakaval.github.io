@@ -24,7 +24,7 @@
             <h2><br/><br/>The Data</h2>
             <p>Our team sourced the data using <a href="https://avatar.fandom.com/wiki/Avatar_Wiki:Transcripts" target="_blank">this page compiling all the scripts on the Avatar Fandom wiki</a>, creating a custom script to parse all the data.</p>
             <p><a href="https://github.com/corncob567/Avatar-TV-Time/blob/main/notebooks/avatar_scapper.py" target="_blank">Our scraper file can be viewed here</a> - to summarize, the scraper was written in Python to scrape each transcript on the page previously mentioned. Each page features an html table of the whole script, with the character and what they said, along with extraneous information such as stage instructions. An http request was made to each page to grab the contents of the page body. Each episode transcript was saved into a Pandas Dataframe with season, episode, character, and dialog, added in the order of the transcript.</p>
-            <p>The data was saved to a csv file containing every dataframe row, <a href="https://github.com/corncob567/Avatar-TV-Time/blob/main/data/avatar_transcripts.csv" target="_blank">viewawble here</a>.</p>
+            <p>The data was saved to a csv file containing every dataframe row, <a href="https://github.com/corncob567/Avatar-TV-Time/blob/main/data/avatar_transcripts.csv" target="_blank">viewable here</a>.</p>
 
 
             <h2><br/><br/>Visualization Components</h2>
@@ -61,7 +61,7 @@
                     <p>With our bender's piechart, we decided on keeping the color scheme of the actual show - red for firebenders, yellow for airbenders, etc. We kept this color scheme consistent across our visualization.</p>
                     <p>Specifically earth - #063, water - #039, fire - #e55, air - #FF9900, nonbender - #9932cc</p>
 
-                    <p><br/><br/>Another option we came up with for our show-specific visualization is to focus on the cabbage man, an iconic character whose cabbages are always distroyed.</p>
+                    <p><br/><br/>Another option we came up with for our show-specific visualization is to focus on the cabbage man, an iconic character whose cabbages are always destroyed.</p>
                     <p>I created a mockup of what that viz would look like - mentions of cabbages in each episode graphed in a table, and BANs to show the user how many times cabbages are mentioned and specifically the phrase "My Cabbages!" is mentioned.</p>
                     <p>However, this would have disrupted the theme of our visualization and we decided that having the bender's piechart was more useful both to fans and non-fans, as well as easier to accomplish in our limited time.</p>
                 </div>
@@ -134,41 +134,162 @@
                   <p><br/><br/>Additionally, choosing a character will filter the word clouds to only words spoken by that character. Pictured: filtering based on Sokka</p>
                 </div>
             </div>
+            <div class="row">
+                <h4>Design Sketches/Justifications</h4>
+                <div class="col">
+                  <img src="images/project3/wordcloud_design.png" class="proj1 media-img img-fluid">  
+                </div>
+                <div class="col">     
+                    <p><br/><br/>We decided to make the color of the text brown to fit with the theme of the show. Most things on the page are yellow and brown, but yellow text is hard to read.</p>
+                </div>
+            </div>
 
-            <!-- <h3><br/><br/>3. Chord Diagram - Who Talked To Who?</h3>
+            <h3><br/><br/>3. Chord Diagram - Who Talked To Who?</h3>
             <div class="row">
                 <div class="col" >
                   <img src="images/project3/chord.png" class="proj1 media-img img-fluid">
                 </div>
                 <div class="col">
-                  <p><br/><br/></p>
+                  <p><br/><br/>The chord diagram is static regardless of the filters applied. This is not something we intended, but we were unable to get the chords properly re-rendering when filters were applied. Essentially, it shows how often each of the main characters refers to another main character by name. Hovering over each arc shows a tooltip showing exactly what the number of references comes out to be between those two main characters.</p>
+                  <p>Viewers will notice very strong connections between Aang, Katara, and Sokka, as well as between Zuko and Iroh (who travel together throughout nearly all of the series). We included this visualization because we believe it highlights the strength of relationships or bonds between characters effectively.</p>
                 </div>
-            </div> -->
+            </div>
+            <div class="row">
+                <h4>Design Sketches/Justifications</h4>
+                <div class="col">
+                  <img src="images/project3/chord_design.png" class="proj1 media-img img-fluid">  
+                </div>
+                <div class="col">     
+                    <p><br/><br/>This mockup was created with the main 3 characters in mind. In this simple design, we knew we had to use qualitative color scheme since we had to be able to individually identify the characters and who they talk to. We ended up using the top 12 characters in the show, which is probably the maximum number of characters, otherwise it would be too cluttered.</p>
+                </div>
+            </div>
 
+            <h3><br/><br/>4. Barchart - How many episodes did they appear in?</h3>
+            <div class="row">
+                <div class="col" >
+                  <img src="images/project3/barchart.png" class="proj1 media-img img-fluid">
+                </div>
+                <div class="col">
+                  <p><br/><br/>The bar chart displays how many episodes each character had at least one line in, sorted by characters with the most screentime. Next to the character name is a symbol of their nation if they are a bender.</p>
+                  <p>When the user hovers over each bar, a tooltip shows with how many episodes and total words they've spoken in the series.</p>
+                  
+                  <p>The bar chart is also scrollable - this was a design decision made so that we wouldn't have a huge barchart that was very tiny.</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col" >
+                  <img src="images/project3/barchart_scroll.gif" class="proj1 media-img img-fluid">
+                </div>
+                <div class="col">
+                  <p><br/><br/>The bar chart is also scrollable - this was a design decision made so that we wouldn't have a huge barchart that takes up too much of the screen.</p>
+                </div>
+            </div>
+            <div class="row">
+                <h4>Design Sketches/Justifications</h4>
+                <div class="col">
+                  <img src="images/project3/barchart_design.png" class="proj1 media-img img-fluid">  
+                </div>
+                <div class="col">     
+                    <p><br/><br/>This mockup was our first idea of what the barchart woud look like. We ended up having to change some of the design, such as the placement of the bender symbols. While we wanted it to be inside the bar itself, some bars were too small to contain the symbol. Therefore, we put it near the tick instead, where there would be enough space. The coloring scheme was based on the nationality of the character (Fire, Water, Earth, Air). This is similar to the pie chart, with the same color scheme (specifically earth - #063, water - #039, fire - #e55, air - #FF9900, non-national - #9932cc).</p>
+                    <p>We also wanted to have the number of words spoken on the bar of the barchart, but we decided that would be confusing to the user - whether the barchart was showing number of appearances or words spoken. We placed that information in the tooltip with a description that would make sense.</p>
+                </div>
+            </div>
 
+            <h2><br/><br/>Insights</h2>
+            <p>Using our visualizations, we were able to discover many insights about the series that we would have never known otherwise.</p>
+            <div class="row">
+                <div class="col">
+                <img src="images/project3/insights_earthbender.png" class="proj1 media-img img-fluid">
+                </div>
+                <div class="col">
+                <p><br/><br/>It was very apparent that earthbenders generally had far less lines than any other bending discipline, even if season two - notorious for including notable earthbenders. </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                <img src="images/project3/insights_airbender.png" class="proj1 media-img img-fluid">
+                </div>
+                <div class="col">
+                <p><br/><br/>Also, related to the pie chart, it is worth noting that Aang - the only airbender with a significant proportion of dialog - speaks more lines than all of the main firebenders in the series combined.</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                <img src="images/project3/insights_aangsokka.gif" class="proj1 media-img img-fluid">
+                </div>
+                <div class="col">
+                <p><br/><br/>Additionally, we noticed that Sokka, although not the main character of the series (Aang), speaks 433 more words than Aang. We assume this is because Sokka tends to elaborate on jokes and plans in often verbose ways, whereas Aang tends to be more direct.</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                <img src="images/project3/insights_katara.gif" class="proj1 media-img img-fluid">
+                </div>
+                <div class="col">
+                <p><br/><br/>Katara always references other main characters significantly more than other characters reference her. This is especially interesting when looking at the references between her and Aang (who was her love interest throughout the entire series).</p>
+                </div>
+            </div>
 
-
-
-
-
-
-              
+            <h2><br/><br/>Process</h2>
+            <h5>Libraries used</h5>
+            <ul>
+              <li><a href="https://d3js.org" target="_blank">D3.js</a> - JavaScript library for manipulating documents based on data</li>
+              <li><a href="https://tabulator.info/" target="_blank">Tabulator</a> - Library for making easy and dynamic tables</li>
+            </ul>
+            <p>Our code was structured with our classes having initVis(), updateVis(), and renderVis() functions to make re-rendering vizzes easier. We assigned work using GitHub Issues and made pull requests when we had updates. Each pull request required a reviewer so that we could keep track of each other's work and do quality checks. Styling was done using SCSS.</p>
+            <p>To run the code, run "python3 -m http.server 8000" in the terminal within the project folder. This requires the http.server library.</p>
+            <p>Or even easier,  <a href="http://www.cs5124-project3.linakaval.com/" target="_blank">check out our website here</a></p>
+            <p>The code can be <a href="https://github.com/corncob567/Avatar-TV-Time" target="_blank">viewed on Github.</a></p>
+  
             
-
-
-
-
-
-
-
-
-            <!--
-            1 section on the visualization components: Explain each view of the data, the GUI, etc.  Explain how you can interact with your application, and how the views update in response to these interactions. 
-            Include design sketches and design justifications 
-            1 section on what your application enables you to discover: Present some findings you arrive at with your application.  Include screen shots to illustrate.
-            1 section on your process- what libraries did you use?  How did you structure your code?  How can you access it and run it?  Link to your code (and the live application, if it is deployed online). 
-            Include a 2-3 minute demo video, showing your application in action.  The easiest way to record this is with a screen capture tool, which also captures audio- such as Quicktime.  Use a voiceover or video captions to explain your application.  Demo videos should be sufficient on their own, but can reference your documentation.  Include the name of the project, your name, the project components, and how your application works.  You can present it on your webpage or on youtube, but linked on your webpage. 
-            Document who on your team did which component of the project.  Ex.  If someone worked on the data, and on bar charts, list their effort on these components.  -->
+            
+ 
+            <h2><br/><br/>Demo Video</h2>
+            <div class="col embed-responsive embed-responsive-16by9" >
+              <iframe width="800" height="500" src="https://www.youtube.com/embed/u5SGtIA_c0I" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+  
+            <h2><br/><br/>Division of work</h2>
+            <table class="table table-sm">
+                <thead class="thead-dark">
+                <th>Name</th>
+                <th>Contribution</th>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>Bryan Cora</td>
+                    <td>Data retrieval<br/>
+                    Data cleanup<br/>
+                    Chord diagram matrix<br/>
+                    Bar Chart initial creation<br/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Daniel Hackney</td>
+                    <td>Word cloud<br/>
+                    Pie chart<br/>
+                    Character icons functionality<br/>
+                    Season/Charactor filtering<br/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Lina Kaval</td>
+                    <td>Table<br/>
+                        Bar chart fixing<br/>
+                        Site UI cleanup<br/>
+                        Episode filtering<br/>
+                        Table modal<br/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Samantha Shaw</td>
+                    <td>Chord diagram<br/>
+                    Site color scheme and background<br/>
+                    Character icons design<br/>
+                </td>
+                </tr>
+                </tbody>
+            </table>
         </div>
       </div>
   
