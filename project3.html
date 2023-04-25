@@ -195,29 +195,101 @@
                 </div>
             </div>
 
+            <h2><br/><br/>Insights</h2>
+            <p>Using our visualizations, we were able to discover many insights about the series that we would have never known otherwise.</p>
+            <div class="row">
+                <div class="col">
+                <img src="images/project3/insights_earthbender.png" class="proj1 media-img img-fluid">
+                </div>
+                <div class="col">
+                <p><br/><br/>It was very apparent that earthbenders generally had far less lines than any other bending discipline, even if season two - notorious for including notable earthbenders. </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                <img src="images/project3/insights_airbender.png" class="proj1 media-img img-fluid">
+                </div>
+                <div class="col">
+                <p><br/><br/>Also, related to the pie chart, it is worth noting that Aang - the only airbender with a significant proportion of dialog - speaks more lines than all of the main firebenders in the series combined.</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                <img src="images/project3/insights_aangsokka.gif" class="proj1 media-img img-fluid">
+                </div>
+                <div class="col">
+                <p><br/><br/>Additionally, we noticed that Sokka, although not the main character of the series (Aang), speaks 433 more words than Aang. We assume this is because Sokka tends to elaborate on jokes and plans in often verbose ways, whereas Aang tends to be more direct.</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                <img src="images/project3/insights_katara.gif" class="proj1 media-img img-fluid">
+                </div>
+                <div class="col">
+                <p><br/><br/>Katara always references other main characters significantly more than other characters reference her. This is especially interesting when looking at the references between her and Aang (who was her love interest throughout the entire series).</p>
+                </div>
+            </div>
 
-
-
-
-
-
-
-
-              
+            <h2><br/><br/>Process</h2>
+            <h5>Libraries used</h5>
+            <ul>
+              <li><a href="https://d3js.org" target="_blank">D3.js</a> - JavaScript library for manipulating documents based on data</li>
+              <li><a href="https://tabulator.info/" target="_blank">Tabulator</a> - Library for making easy and dynamic tables</li>
+            </ul>
+            <p>Our code was structured with our classes having initVis(), updateVis(), and renderVis() functions to make re-rendering vizzes easier. We assigned work using GitHub Issues and made pull requests when we had updates. Each pull request required a reviewer so that we could keep track of each other's work and do quality checks. Styling was done using SCSS.</p>
+            <p>To run the code, run "python3 -m http.server 8000" in the terminal within the project folder. This requires the http.server library.</p>
+            <p>Or even easier,  <a href="http://www.cs5124-project3.linakaval.com/" target="_blank">check out our website here</a></p>
+            <p>The code can be <a href="https://github.com/corncob567/Avatar-TV-Time" target="_blank">viewed on Github.</a></p>
+  
             
-
-
-
-
-
-
-
-
-            <!--
-            1 section on what your application enables you to discover: Present some findings you arrive at with your application.  Include screen shots to illustrate.
-            1 section on your process- what libraries did you use?  How did you structure your code?  How can you access it and run it?  Link to your code (and the live application, if it is deployed online). 
-            Include a 2-3 minute demo video, showing your application in action.  The easiest way to record this is with a screen capture tool, which also captures audio- such as Quicktime.  Use a voiceover or video captions to explain your application.  Demo videos should be sufficient on their own, but can reference your documentation.  Include the name of the project, your name, the project components, and how your application works.  You can present it on your webpage or on youtube, but linked on your webpage. 
-            Document who on your team did which component of the project.  Ex.  If someone worked on the data, and on bar charts, list their effort on these components.  -->
+            
+ 
+            <h2><br/><br/>Demo Video</h2>
+            <div class="col embed-responsive embed-responsive-16by9" >
+              <iframe width="800" height="500" src="https://www.youtube.com/embed/u5SGtIA_c0I" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+  
+            <h2><br/><br/>Division of work</h2>
+            <table class="table table-sm">
+                <thead class="thead-dark">
+                <th>Name</th>
+                <th>Contribution</th>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>Bryan Cora</td>
+                    <td>Data retrieval<br/>
+                    Data cleanup<br/>
+                    Chord diagram matrix<br/>
+                    Bar Chart initial creation<br/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Daniel Hackney</td>
+                    <td>Word cloud<br/>
+                    Pie chart<br/>
+                    Character icons functionality<br/>
+                    Season/Charactor filtering<br/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Lina Kaval</td>
+                    <td>Table<br/>
+                        Bar chart fixing<br/>
+                        Site UI cleanup<br/>
+                        Episode filtering<br/>
+                        Table modal<br/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Samantha Shaw</td>
+                    <td>Chord diagram<br/>
+                    Site color scheme and background<br/>
+                    Character icons design<br/>
+                </td>
+                </tr>
+                </tbody>
+            </table>
         </div>
       </div>
   
