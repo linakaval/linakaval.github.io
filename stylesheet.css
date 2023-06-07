@@ -13,6 +13,9 @@
   .row-project{
     padding: 2rem!important;
   }
+  .blog-post{
+    margin: 1.2rem;
+  }
 
 }
 
@@ -28,6 +31,9 @@
   }
   .row-project{
     padding: 3rem!important;
+  }
+  .blog-post{
+    margin: 4rem;
   }
   
 }
