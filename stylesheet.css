@@ -129,6 +129,18 @@ ul{
     margin-inline-start: 2em; 
 }
 
+.btn-dark{
+  background-color: #ecb0e1!important;
+  color: #212529!important;
+  box-shadow: 0 6px #212529;
+  border: none!important;;
+}
+
+.btn-dark:hover, .bts-dark:active{
+  background-color: #212529!important;
+  color: #fff!important;
+}
+
 
 /*
 colors: #b57edc
