@@ -7,25 +7,38 @@
     <div class="collapse navbar-collapse" id="navbarNavDropdown">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+          <a class="nav-link" href="/index.html" id="home">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="about.html">About</a>
+          <a class="nav-link" href="../about.html">About</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="projects_list.html">Projects</a>
+          <a class="nav-link" href="../projects_list.html">Projects</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="resume.html">Resume</a>
+          <a class="nav-link" href="../resume.html">Resume</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="media.html">Media</a>
+          <a class="nav-link" href="../media.html">Media</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="blog.html">Blog</a>
+          <a class="nav-link" href="../blog.html">Blog</a>
         </li>
       </ul>
     </div>
   </div>
+  <script>
+    let active = false;
+    document.querySelectorAll(".nav-link").forEach((link) => {
+    if (link.href === window.location.href) {
+        link.classList.add("active");
+        link.setAttribute("aria-current", "page");
+        active = true;
+    }
+    });
+    if (!active){
+      document.querySelector("#home").classList.add("active");
+      document.querySelector("#home").setAttribute("aria-current", "page");}
+  </script>
 </nav>
 
