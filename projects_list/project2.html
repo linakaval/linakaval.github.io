@@ -1,15 +1,18 @@
 <head>
-    <link rel="stylesheet" type="text/css" href="../stylesheet.css">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
-  </head>
+  <link rel="stylesheet" type="text/css" href="stylesheet.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+  <script src="js/nav.js"></script>
+  <script src="js/scroll.js"></script>
+</head>
   <body class="bg-main2">
       <div id="nav-placeholder"></div>
-  
+      <button onclick="topFunction()" id="goToTopBtn" title="Go to top"><i class="fa fa-arrow-up"></i></button>
       <div class="container-fluid content-padding">
         <div class="row row-header mb-4">
           <div class="col col-header bg-main1 rounded-3">
@@ -32,10 +35,10 @@
           <h2><br/><br/>Visualization Components</h2>
 
           <h3>Full Dashboard View</h3>
-          <img src="images/project2/full_dashboard.png" class="proj1 media-img img-fluid">
+          <img src="../images/project2/full_dashboard.png" class="proj1 media-img img-fluid">
           <div class="row">
             <div class="col">
-              <img src="images/project2/filtering.png" class="proj1 media-img img-fluid ">
+              <img src="../images/project2/filtering.png" class="proj1 media-img img-fluid ">
             </div>
             <div class="col">
               <p><br/><br/>The whole dashboard can be filtered using the barcharts and brush. The filtering updates to every other visualization on the dashboard. At the bottom of the page, there is a button to clear filters and display the number of calls that are currently shown on the page.</p>
@@ -43,7 +46,7 @@
           </div>
           <div class="row">
             <div class="col">
-              <img src="images/project2/info.png" class="proj1 media-img img-fluid ">
+              <img src="../images/project2/info.png" class="proj1 media-img img-fluid ">
             </div>
             <div class="col">
               <p><br/><br/>Most of the visualizations have an "i" button to display info to the user on how to use/interpret the visualization.</p>
@@ -53,11 +56,11 @@
 
           <h3><br/><br/>Map</h3>
           <h5>View of the data</h5>
-          <img src="images/project2/map.png" class="proj1 media-img img-fluid ">
+          <img src="../images/project2/map.png" class="proj1 media-img img-fluid ">
           <h5><br/><br/>UI/Interactions</h5>
           <div class="row">
             <div class="col" >
-              <img src="images/project2/polygon.png" class="proj1 media-img img-fluid">  
+              <img src="../images/project2/polygon.png" class="proj1 media-img img-fluid">  
             </div>
             <div class="col">
               <p><br/><br/>Multi-Polygon Selection Filtering - Users can draw multiple polygons on the map to only include calls made in those regions. These shapes can also be edited and deleted.</p>
@@ -65,7 +68,7 @@
           </div>
           <div class="row">
             <div class="col" >
-              <img src="images/project2/map_hover.png" class="proj1 media-img img-fluid">  
+              <img src="../images/project2/map_hover.png" class="proj1 media-img img-fluid">  
             </div>
             <div class="col">
               <p><br/><br/>Tooltip - Users can hover over each data point to view more information about a specific call.</p>
@@ -73,7 +76,7 @@
           </div>
           <div class="row">
             <div class="col" style="width: 60%">
-              <img src="images/project2/map_click.png" class="proj1 media-img img-fluid">  
+              <img src="../images/project2/map_click.png" class="proj1 media-img img-fluid">  
             </div>
             <div class="col">
               <p><br/><br/>Clicking a data point will bring users to a zoomed in version of the map surrounding the selected data point.</p>
@@ -81,7 +84,7 @@
           </div>
           <div class="row">
             <div class="col" >
-              <img src="images/project2/map_dark.png" class="proj1 media-img img-fluid">  
+              <img src="../images/project2/map_dark.png" class="proj1 media-img img-fluid">  
             </div>
             <div class="col">
               <p><br/><br/>The user can choose multiple map background options. The options are: Default, Color, Streets, Dark, and Gray.</p>
@@ -100,13 +103,13 @@
               </thead>
               <tbody>
                 <tr>
-                  <td><p>Color by CALL TYPE</p><img src="images/project2/map_calltype.png" class="proj1 media-img img-fluid">  </td>
+                  <td><p>Color by CALL TYPE</p><img src="../images/project2/map_calltype.png" class="proj1 media-img img-fluid">  </td>
                   <td>Nominal (Qualitative)</td>
                   <td>d3.schemePaired</td>
                   <td>Categorical<br/>Because we were working with qualitative data, we knew we had to use a categorical color scheme. We used d3.schemePaired because it had the most color options for categorical data.</td>
                 </tr>
                 <tr>
-                  <td><p>Color by TIME BETWEEN REQUESTED DATE AND UPDATED DATE</p><img src="images/project2/map_timebetween.png" class="proj1 media-img img-fluid">  </td>
+                  <td><p>Color by TIME BETWEEN REQUESTED DATE AND UPDATED DATE</p><img src="../images/project2/map_timebetween.png" class="proj1 media-img img-fluid">  </td>
                   <td>Interval (Quantitative)</td>
                   <td>Range from [“#c1e7ff", "#004c6d”]
                   </td>
@@ -114,14 +117,14 @@
                   </td>
                 </tr>
                 <tr>
-                  <td><p>Color by DAYS IN THE YEAR</p><img src="images/project2/map_intoyear.png" class="proj1 media-img img-fluid">  </td>
+                  <td><p>Color by DAYS IN THE YEAR</p><img src="../images/project2/map_intoyear.png" class="proj1 media-img img-fluid">  </td>
                   <td>Interval (Quantitative)</td>
                   <td>Range from [“#c1e7ff", "#004c6d”]
                   </td>
                   <td>Sequential/Monochromatic (Single-Hue)<br/>Interval data is best paired with a sequential scale. We did not use a diverging scale because there was no midpoint in our data.</td>
                 </tr>
                 <tr>
-                  <td><p>Color by PUBLIC AGENCY</p><img src="images/project2/map_agency.png" class="proj1 media-img img-fluid">  </td>
+                  <td><p>Color by PUBLIC AGENCY</p><img src="../images/project2/map_agency.png" class="proj1 media-img img-fluid">  </td>
                   <td>Nominal (Qualitative)</td>
                   <td>d3.schemePaired</td>
                   <td>Categorical<br/>Because we were working with qualitative data, we knew we had to use a categorical color scheme. We used d3.schemePaired because it had the most color options for categorical data. We chose colors that were blue to match the rest of the color scheme we were using across the dashboard.
@@ -136,9 +139,9 @@
           <h3><br/><br/>Barcharts</h3>
           <p>The visualizations below all use the barchart.js file.</p>
           <div class="d-flex flex-row">
-            <div class="p-1"><img src="images/project2/barchart_zipcode.png" class="proj1flex media-img img-fluid"></div>
-            <div class="p-1"><img src="images/project2/barchart_weekday.png" class="proj1flex media-img img-fluid"></div>
-            <div class="p-1"><img src="images/project2/barchart_category.png" class="proj1flex media-img img-fluid"></div>
+            <div class="p-1"><img src="../images/project2/barchart_zipcode.png" class="proj1flex media-img img-fluid"></div>
+            <div class="p-1"><img src="../images/project2/barchart_weekday.png" class="proj1flex media-img img-fluid"></div>
+            <div class="p-1"><img src="../images/project2/barchart_category.png" class="proj1flex media-img img-fluid"></div>
           </div>
 
 
@@ -146,7 +149,7 @@
           <h5><br/>UI/Interactions</h5>
           <div class="row">
             <div class="col" >
-              <img src="images/project2/zipcode_hover.png" class="proj1 media-img img-fluid">  
+              <img src="../images/project2/zipcode_hover.png" class="proj1 media-img img-fluid">  
             </div>
             <div class="col">
               <p><br/><br/>Users can hover over each bar to view more specific data (exact call count) for each bar.</p>
@@ -154,7 +157,7 @@
           </div>
           <div class="row">
             <div class="col" >
-              <img src="images/project2/zipcode_hover.png" class="proj1 media-img img-fluid">  
+              <img src="../images/project2/zipcode_hover.png" class="proj1 media-img img-fluid">  
             </div>
             <div class="col">
               <p><br/><br/>Users can also filter other data by clicking on a bar. To remove the filter, the user can click again on the bar. This filter also works when the user clicks on the x-axis label for the bar.</p>
@@ -166,7 +169,7 @@
           <h5><br/>UI/Interactions</h5>
           <div class="row">
             <div class="col" >
-              <img src="images/project2/weekday_hover.png" class="proj1 media-img img-fluid">  
+              <img src="../images/project2/weekday_hover.png" class="proj1 media-img img-fluid">  
             </div>
             <div class="col">
               <p><br/><br/>Users can hover over each bar to view more specific data (exact call count) for each bar.</p>
@@ -175,7 +178,7 @@
           </div>
           <div class="row">
             <div class="col" >
-              <img src="images/project2/weekday_filter.png" class="proj1 media-img img-fluid">  
+              <img src="../images/project2/weekday_filter.png" class="proj1 media-img img-fluid">  
             </div>
             <div class="col">
               <p><br/><br/>Users can also filter other data by clicking on a bar. To remove the filter, the user can click again on the bar. This filter also works when the user clicks on the x-axis label for the bar.</p>
@@ -187,7 +190,7 @@
           <h5><br/>UI/Interactions</h5>
           <div class="row">
             <div class="col" >
-              <img src="images/project2/category_hover.png" class="proj1 media-img img-fluid">  
+              <img src="../images/project2/category_hover.png" class="proj1 media-img img-fluid">  
             </div>
             <div class="col">
               <p><br/><br/>Users can hover over each bar to view more specific data (exact call count) for each bar.</p>
@@ -196,7 +199,7 @@
           </div>
           <div class="row">
             <div class="col" >
-              <img src="images/project2/category_filter.png" class="proj1 media-img img-fluid">  
+              <img src="../images/project2/category_filter.png" class="proj1 media-img img-fluid">  
             </div>
             <div class="col">
               <p><br/><br/>Users can also filter other data by clicking on a bar. To remove the filter, the user can click again on the bar. This filter also works when the user clicks on the x-axis label for the bar.</p>
@@ -206,24 +209,24 @@
 
           <h4><br/>Timeline - Calls over time</h4>
           <h5>View of the data</h5>
-          <img src="images/project2/timeline.png" class="proj1 media-img img-fluid">  
+          <img src="../images/project2/timeline.png" class="proj1 media-img img-fluid">  
           <p><br/><br/>This cluster of components all work together to show time series data to the user. The first component is the <a href="https://gramener.github.io/visual-vocabulary-vega/#/Change-over-Time/" target="_blank">calendar heatmap</a>. What I like about this visualization is that you can see different trends at once. For example, by focusing on the rows, I can see that Sundays and Saturdays have the least calls. This makes sense - for a non-emergency line, more people are likely to make calls during the workweek about a traffic light being down or water pipe leak.</p>
-          <img src="images/project2/timeline_heatmap.png" class="proj1 media-img img-fluid">  
+          <img src="../images/project2/timeline_heatmap.png" class="proj1 media-img img-fluid">  
           <p>Another insight the user can gain is being able to see when the most calls were made in the whole year, by looking for the darkest rectangle in the heatmap. This looks to be 2/23/2022 with 745 calls.</p>
           <p>We can also see an abnormally light day surrounded by dark days in November. By hovering on the light day, we can see that it was Thanksgiving Day - a holiday so not many people would make calls.</p>
           
           <p><br/><br/><br/>The other component is the line chart of the time series data with calls made over the year. While it may be a boring way to display information, it is something that users are used to viewing and analyzing. We can confirm that the highest call count made in 2022 was 745 calls.</p>
-          <img src="images/project2/timeline_linechart.png" class="proj1 media-img img-fluid">  
+          <img src="../images/project2/timeline_linechart.png" class="proj1 media-img img-fluid">  
           <p>The user can also gain insight on whether calls increase over the year. There is no obvious trend to indicate that is true.</p>
 
           <p><br/><br/><br/>The brush between these two components allows the user to zoom in to specific periods of time on both the heatmap and the linechart.</p>
-          <img src="images/project2/timeline_brush.png" class="proj1 media-img img-fluid">  
-          <img src="images/project2/timeline_brush_view.png" class="proj1 media-img img-fluid">  
+          <img src="../images/project2/timeline_brush.png" class="proj1 media-img img-fluid">  
+          <img src="../images/project2/timeline_brush_view.png" class="proj1 media-img img-fluid">  
 
           <h5><br/><br/>UI/Interactions</h5>
           <div class="row">
             <div class="col" >
-              <img src="images/project2/heatmap_hover.png" class="proj1 media-img img-fluid">  
+              <img src="../images/project2/heatmap_hover.png" class="proj1 media-img img-fluid">  
             </div>
             <div class="col">
               <p><br/><br/>Users can hover over each rectangle on the calendar heatmap to view more specific data (exact call count and date) for each rectangle.</p>
@@ -231,7 +234,7 @@
           </div>
           <div class="row">
             <div class="col" >
-              <img src="images/project2/linechart_hover.png" class="proj1 media-img img-fluid">  
+              <img src="../images/project2/linechart_hover.png" class="proj1 media-img img-fluid">  
             </div>
             <div class="col">
               <p><br/><br/>Users can hover over points on the line chart to view more specific data (exact call count) for each point.</p>
@@ -241,11 +244,11 @@
 
           <h4><br/><br/><br/>Histogram - Days Between Call Received and Issue Updated</h4>
           <h5>View of the data</h5>
-          <img src="images/project2/histogram.png" class="proj1 media-img img-fluid">  
+          <img src="../images/project2/histogram.png" class="proj1 media-img img-fluid">  
           <h5>UI/Interactions</h5>
           <div class="row">
             <div class="col" >
-              <img src="images/project2/histogram_hover.png" class="proj1 media-img img-fluid">  
+              <img src="../images/project2/histogram_hover.png" class="proj1 media-img img-fluid">  
             </div>
             <div class="col">
               <p><br/><br/>Users can hover over each bar to view more specific data (number of days to resolution and exact call count) for each bar.</p>
@@ -257,7 +260,7 @@
           <h5>View of the data</h5>
           <div class="row">
             <div class="col">
-              <img src="images/project2/word_cloud.png" class="proj1 media-img img-fluid">  
+              <img src="../images/project2/word_cloud.png" class="proj1 media-img img-fluid">  
             </div>
             <div class="col">
               <p><br/><br/>This word cloud gets the statusses of each call and creates a frequency table of the most popular words. Stop words such as "is", "or", were filtered out so that the user could gain value from the word cloud.</p>   
@@ -267,25 +270,25 @@
 
           <h2><br/><br/>Sketching and Design Justifications</h2>
           <p>The dashboard has many parts to it. Sketched below is how we decided to fit everything nicely.</p>
-          <img src="images/project2/sketch_dashboard.png" class="proj1 media-img img-fluid">  
+          <img src="../images/project2/sketch_dashboard.png" class="proj1 media-img img-fluid">  
           <p>Below is the different ways we thought of fitting the map components together. We went with the last option because it looked cleanest to us. We also didn't have to worry about the changing length of the legend items since we wouldn't put anything under the legend.</p>
-          <img src="images/project2/sketch_map.jpg" class="proj1 media-img img-fluid">  
+          <img src="../images/project2/sketch_map.jpg" class="proj1 media-img img-fluid">  
           <p>Below is another view at just the map and fitting the components together. We did not go with this design because it cluttered the map space. Instead, we put everything outside the map.</p>
-          <img src="images/project2/sketch_map_details.png" class="proj1 media-img img-fluid"> 
+          <img src="../images/project2/sketch_map_details.png" class="proj1 media-img img-fluid"> 
           <p>Below is the sketches of our bar charts and where the data would come from.</p>
-          <img src="images/project2/sketch_barchart.png" class="proj1 media-img img-fluid"> 
+          <img src="../images/project2/sketch_barchart.png" class="proj1 media-img img-fluid"> 
           <p>Below is the brainstorming of our timeline component. We felt that traditional visualizations like line charts or bar charts wouldn't be able to tell us as much information as another kind of visualization. That is when we came up with the heatmap. This allows the user to see trends over both weekdays and across the year.</p>
-          <img src="images/project2/sketch_timeline.png" class="proj1 media-img img-fluid">  
+          <img src="../images/project2/sketch_timeline.png" class="proj1 media-img img-fluid">  
 
           <h3>Color Palette</h3>
           <p>We decided with a neutral blue color to use for our entire dashboard. Sticking to one color palette creates uniformity within our dashboard. This was important because with all of us working on different parts of the dashboard, we needed to make sure we could tie up all the work into looking like it fit together, rather than some things we just threw onto a screen.</p>
-          <img src="images/project2/palette.png" class="proj1 media-img img-fluid">
+          <img src="../images/project2/palette.png" class="proj1 media-img img-fluid">
 
 
           <h2><br/><br/>Insights</h2>
           <div class="row">
             <div class="col">
-              <img src="images/project2/insights_mystery_jan.png" class="proj1 media-img img-fluid">
+              <img src="../images/project2/insights_mystery_jan.png" class="proj1 media-img img-fluid">
             </div>
             <div class="col">
               <p><br/><br/>Using the timeline, we can see a pattern - from 1/25/2022 to 2/4/2022, it is much lighter (meaning fewer calls were made). While I don't see anything in the news that may explain the lack of calls, the user could maybe consider the scenario that perhaps the 311 call system was down during this period. This is something that the user may be interested in diving into further.</p>
@@ -293,7 +296,7 @@
           </div>
           <div class="row">
             <div class="col">
-              <img src="images/project2/insights_5days.png" class="proj1 media-img img-fluid">
+              <img src="../images/project2/insights_5days.png" class="proj1 media-img img-fluid">
             </div>
             <div class="col">
               <p><br/><br/>Users can gain insight on the data by seeing that most calls get resolved within 5 days. Users can also see that the longest time it takes to resolve an issue is around 55 days.</p>
@@ -301,7 +304,7 @@
           </div>
           <div class="row">
             <div class="col">
-              <img src="images/project2/insights_5days.png" class="proj1 media-img img-fluid">
+              <img src="../images/project2/insights_5days.png" class="proj1 media-img img-fluid">
             </div>
             <div class="col">
               <p><br/><br/>Curiously enough there are significantly less 311 calls on the weekends. This can be seen either in the daily barchart or the timeline/heatmap. I suspect that this might arise from people not being out or concerned about non emergencies on the weekend.  Another contributing factor might be that people are more inclined to call it in on the way to work or first thing in the morning then when they are out with family.</p>
@@ -309,7 +312,7 @@
           </div>
           <div class="row">
             <div class="col">
-              <img src="images/project2/insights_empty_map.png" class="proj1 media-img img-fluid">
+              <img src="../images/project2/insights_empty_map.png" class="proj1 media-img img-fluid">
             </div>
             <div class="col">
               <p><br/><br/>There are many discoveries users of our application could make by filtering and observing the data. One immediate observation that can be made is by looking at the map view. It is clear to see that some communities do not utilize the public Cincinnati 311 call system at all, despite being within the greater Cincinnati area.</p>
@@ -317,7 +320,7 @@
           </div>
           <div class="row">
             <div class="col">
-              <img src="images/project2/insights_thanksgiving.png" class="proj1 media-img img-fluid">
+              <img src="../images/project2/insights_thanksgiving.png" class="proj1 media-img img-fluid">
             </div>
             <div class="col">
               <p><br/><br/>As previously mentioned, users will quickly notice that far fewer calls are made on weekends than weekdays, and during the latter half of January and first half of February the system may have been down. Far more calls are made relating to public services than any other category, and far fewer calls are made on holidays (see Thanksgiving below).</p>
@@ -325,7 +328,7 @@
           </div>
           <div class="row">
             <div class="col">
-              <img src="images/project2/insights_cars.png" class="proj1 media-img img-fluid">
+              <img src="../images/project2/insights_cars.png" class="proj1 media-img img-fluid">
             </div>
             <div class="col">
               <p><br/><br/>Additionally, users may notice trends in the data as they explore variations in the word cloud. For instance, nearly all calls in the “Police” category involve cars. </p>
@@ -403,11 +406,4 @@
           </table>
         </div>
       </div>
-  
-  
-      <script>
-          $(function(){
-            $("#nav-placeholder").load("../nav.html");
-          });
-      </script>
   </body>
